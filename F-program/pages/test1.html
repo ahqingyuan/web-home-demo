@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安徽青园集团(中国农机城)--百年企业 国际青园</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 其他样式和配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2E7D32', // 深绿色主色调
+                        secondary: '#FF9800', // 橙色辅助色
+                        dark: '#1A202C', // 深色文本
+                        light: '#F8FAFC', // 浅色背景
+                        neutral: '#4A5568', // 中性色
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            /* 自定义工具类 */
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-light">
+    <!-- 导入导航栏模块 -->
+    <div id="header-container"></div>
+
+    <!-- 首页内容 -->
+    <section id="home">
+        <!-- 首页特有内容 -->
+    </section>
+
+    <section id="market">
+        <!-- 农机大市场内容 -->
+    </section>
+
+    <!-- 其他页面特有模块 -->
+
+    <!-- 导入页脚模块 -->
+    <div id="footer-container"></div>
+
+    <!-- 导入回到顶部按钮 -->
+    <div id="back-to-top-container"></div>
+
+    <!-- 导入通用脚本 -->
+    <div id="scripts-container"></div>
+
+    <!-- 加载模块的脚本 -->
+    <script>
+        // 动态加载模块
+        async function loadModules() {
+            // 加载导航栏
+            const headerContainer = document.getElementById('header-container');
+            const headerResponse = await fetch('../common/modules/header.html');
+            headerContainer.innerHTML = await headerResponse.text();
+
+            // 加载页脚
+            const footerContainer = document.getElementById('footer-container');
+            const footerResponse = await fetch('../common/modules/footer.html');
+            footerContainer.innerHTML = await footerResponse.text();
+
+            // 加载回到顶部按钮
+            const backToTopContainer = document.getElementById('back-to-top-container');
+            const backToTopResponse = await fetch('../common/modules/back-to-top.html');
+            backToTopContainer.innerHTML = await backToTopResponse.text();
+
+            // 加载脚本
+            const scriptsContainer = document.getElementById('scripts-container');
+            const scriptsResponse = await fetch('../common/modules/scripts.html');
+            scriptsContainer.innerHTML = await scriptsResponse.text();
+        }
+
+        // 页面加载完成后加载模块
+        window.addEventListener('DOMContentLoaded', loadModules);
+    </script>
+</body>
+</html>

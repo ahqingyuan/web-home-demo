@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>下载中心 - 农机科技有限公司</title>
+  <!-- 引入外部资源 -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- Tailwind 配置 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2E7D32', // 主色调：深绿色，代表农业、自然
+            secondary: '#8D6E63', // 辅助色：棕色，代表土地
+            dark: '#1A202C', // 深色文本
+            accent: '#FF9800', // 强调色：橙色，用于突出按钮和重要元素
+            neutral: '#F5F5F5', // 中性色：浅灰色，用于背景
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <!-- 自定义工具类 -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .card-hover {
+        @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+      }
+      .btn-primary {
+        @apply bg-accent hover:bg-amber-600 text-white font-medium py-2 px-4 rounded transition-all duration-300 inline-flex items-center justify-center;
+      }
+      .section-padding {
+        @apply py-12 md:py-20;
+      }
+      
+      .qrcode-tooltip {
+                            opacity: 0;
+                            visibility: hidden;
+                            transform: translateY(10px);
+                            transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+                            width: 200px; /* 固定宽度 */
+                        }
+                        .qrcode-tooltip.active {
+                            opacity: 1;
+                            visibility: visible;
+                            transform: translateY(0);
+                        }
+            
+                        @keyframes fadeIn {
+                            from { opacity: 0; transform: translateY(10px); }
+                            to { opacity: 0.95; transform: translateY(0); }
+                        }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+  <!-- 导航栏 -->
+  <header class="fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+            <a href="#" class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                    <img src="../img/icon/ahqy.jpg" alt="安徽青园集团标志" class="w-full h-full object-cover rounded-full">
+                </div>
+                <span class="text-xl font-display font-bold text-primary">安徽青园集团(中国农机城)</span>
+            </a>
+
+            <!-- 桌面导航 - 与新闻页导航结构一致 -->
+            <nav class="hidden md:flex items-center space-x-8">
+              <a href="index.html#home" class="text-dark hover:text-primary transition-colors font-medium">首页</a>
+              <a href="index.html#market" class="text-dark hover:text-primary transition-colors font-medium">农机大市场</a>
+              <a href="index.html#merchants" class="text-dark hover:text-primary transition-colors font-medium">商铺展示</a>
+              <a href="index.html#products" class="text-dark hover:text-primary transition-colors font-medium">产品中心</a>
+              <a href="index.html#testimonials" class="text-dark hover:text-primary transition-colors font-medium">客户评价</a>
+              <a href="index.html#services" class="text-dark hover:text-primary transition-colors font-medium">服务优势</a>
+              <a href="index.html#culture" class="text-dark hover:text-primary transition-colors font-medium">文化理念</a>
+              <a href="index.html#dynamics" class="text-dark hover:text-primary transition-colors font-medium">项目投资动态</a>
+              <a href="index.html#news" class="text-dark hover:text-primary transition-colors font-medium">新闻动态</a>
+              <a href="index.html#media" class="text-dark hover:text-primary transition-colors font-medium">媒体看青园</a>
+              <a href="index.html#jobs" class="text-dark hover:text-primary transition-colors font-medium">人才招聘</a>
+              <a href="index.html#investment" class="text-dark hover:text-primary transition-colors font-medium">招商中心</a>
+              <a href="index.html#download" class="text-dark hover:text-primary transition-colors font-medium">下载中心</a>
+              <a href="index.html#detail" class="text-dark hover:text-primary transition-colors font-medium">关于我们</a>
+              <a href="index.html#contact" class="text-dark hover:text-primary transition-colors font-medium">联系我们</a>
+          </nav>
+            <!-- 联系按钮 - 与新闻页样式一致 -->
+            <a href="index.html#contact" class="hidden md:block bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                立即咨询
+            </a>
+
+            <!-- 移动端菜单按钮 -->
+            <button id="menu-toggle" class="md:hidden text-dark focus:outline-none">
+                <i class="fa fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- 移动端导航菜单 - 与新闻页保持一致 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 bg-blur border-t border-gray-100 shadow-lg">
+      <div class="container mx-auto px-4 py-3 space-y-3">
+          <a href="index.html#home" class="block py-2 text-dark hover:text-primary transition-colors">首页</a>
+          <a href="index.html#market" class="block py-2 text-dark hover:text-primary transition-colors">农机大市场</a>
+          <a href="index.html#merchants" class="block py-2 text-dark hover:text-primary transition-colors">商铺展示</a>
+          <a href="index.html#products" class="block py-2 text-dark hover:text-primary transition-colors">产品中心</a>
+          <a href="index.html#testimonials" class="block py-2 text-dark hover:text-primary transition-colors">客户评价</a>
+          <a href="index.html#services" class="block py-2 text-dark hover:text-primary transition-colors">服务优势</a>
+          <a href="index.html#culture" class="block py-2 text-dark hover:text-primary transition-colors">文化理念</a>
+          <a href="index.html#dynamics" class="block py-2 text-dark hover:text-primary transition-colors">项目投资动态</a>
+          <a href="index.html#news" class="block py-2 text-dark hover:text-primary transition-colors">新闻动态</a>
+          <a href="index.html#media" class="block py-2 text-dark hover:text-primary transition-colors">媒体看青园</a>
+          <a href="index.html#jobs" class="block py-2 text-dark hover:text-primary transition-colors">人才招聘</a>
+          <a href="index.html#investment" class="block py-2 text-dark hover:text-primary transition-colors">招商中心</a>
+          <a href="index.html#download" class="block py-2 text-dark hover:text-primary transition-colors">下载中心</a>
+          <a href="index.html#detail" class="block py-2 text-dark hover:text-primary transition-colors">关于我们</a>
+          <a href="index.html#contact" class="block py-2 text-dark hover:text-primary transition-colors">联系我们</a>
+      </div>
+  </div>
+</header>
+
+    <!-- 面包屑导航 -->
+    <div class="pt-24 pb-6 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center text-sm">
+                <a href="index.html" class="text-gray-400hover:text-primary">首页</a>
+                <i class="fa fa-angle-right mx-2 text-gray-400"></i>
+                <span class="text-primary">下载中心</span>
+            </div>
+        </div>
+    </div>
+
+  <!-- 页面标题栏 -->
+  <section class="bg-primary text-white py-10 md:py-16">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+        <div>
+          <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-2">下载中心</h1>
+          <p class="text-green-100">获取产品手册、说明书、技术资料等资源</p>
+        </div>
+        <!-- <div class="mt-4 md:mt-0">
+          <nav class="flex items-center text-green-100">
+            <a href="index.html" class="hover:text-white transition-colors">首页</a>
+            <i class="fa fa-angle-right mx-2 text-sm"></i>
+            <span class="text-white">下载中心</span>
+          </nav>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 主要内容区 -->
+  <main class="section-padding">
+    <div class="container mx-auto px-4">
+      <!-- 搜索和筛选区 -->
+      <div class="bg-white rounded-lg shadow-sm p-6 mb-10">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <!-- 搜索框 -->
+          <div class="relative w-full md:w-1/2">
+            <input 
+              type="text" 
+              id="searchInput" 
+              placeholder="搜索文件名称、关键词..." 
+              class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+            >
+            <i class="fa fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+          </div>
+          
+          <!-- 筛选选项 -->
+          <div class="flex flex-wrap gap-4">
+            <div class="relative">
+              <select id="categoryFilter" class="appearance-none bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all">
+                <option value="all">所有分类</option>
+                <option value="manual">产品手册</option>
+                <option value="instruction">操作指南</option>
+                <option value="brochure">宣传册</option>
+                <option value="technical">技术资料</option>
+                <option value="software">软件工具</option>
+                <option value="recruitment">招聘相关</option> <!-- 新增分类 -->
+              </select>
+              <i class="fa fa-chevron-down absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+            </div>
+            
+            <div class="relative">
+              <select id="sortFilter" class="appearance-none bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all">
+                <option value="newest">最新上传</option>
+                <option value="oldest">最早上传</option>
+                <option value="name-asc">名称 (A-Z)</option>
+                <option value="name-desc">名称 (Z-A)</option>
+                <option value="size-desc">文件大小 (从大到小)</option>
+                <option value="size-asc">文件大小 (从小到大)</option>
+              </select>
+              <i class="fa fa-chevron-down absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 分类标签 -->
+      <div class="mb-8">
+        <h3 class="text-lg font-semibold mb-4">快速筛选</h3>
+        <div class="flex flex-wrap gap-2">
+          <button class="category-tag active bg-primary text-white px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="all">全部文件</button>
+          <button class="category-tag bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="manual">产品手册</button>
+          <button class="category-tag bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="instruction">操作指南</button>
+          <button class="category-tag bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="brochure">宣传册</button>
+          <button class="category-tag bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="technical">技术资料</button>
+          <button class="category-tag bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="software">软件工具</button>
+          <button class="category-tag bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-full text-sm font-medium transition-all" data-category="recruitment">招聘相关</button> <!-- 新增标签 -->
+        </div>
+      </div>
+      
+      <!-- 下载资源列表 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- 资源项 1 -->
+        <div class="download-item bg-white rounded-lg shadow-sm overflow-hidden card-hover" data-category="brochure">
+          <div class="p-6">
+            <div class="flex items-start mb-4">
+              <div class="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-image text-xl"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-lg mb-1">安徽青园集团宣传手册</h3>
+                <p class="text-gray-500 text-sm">宣传册 · 20253-09-30</p>
+              </div>
+            </div>
+            <p class="text-gray-600 text-sm mb-4 line-clamp-2">安徽青园集团宣传手册含集团概况、荣誉、业务等。</p>
+            <div class="flex items-center justify-between">
+              <span class="text-gray-500 text-sm"><i class="fa fa-file-pdf-o mr-1"></i> 22.8 MB</span>
+              <a href="../resource/青园集团企业宣传手册.pdf" class="btn-primary" download>
+                <i class="fa fa-download mr-2"></i> 下载
+              </a>
+            </div>
+          </div>
+        </div>
+        
+     <!-- 资源项 2 - 新增简历模板 -->
+<div class="download-item bg-white rounded-lg shadow-sm overflow-hidden card-hover" data-category="recruitment">
+    <div class="p-6">
+      <div class="flex items-start mb-4">
+        <div class="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center text-primary mr-4">
+          <i class="fa fa-file-word-o text-xl"></i> <!-- Word文档图标 -->
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg mb-1">应聘简历模板</h3>
+          <p class="text-gray-500 text-sm">招聘相关 · 2023-11-05</p>
+        </div>
+      </div>
+      <p class="text-gray-600 text-sm mb-4 line-clamp-2">公司标准简历模板，包含个人信息、教育背景、工作经历等模块，适合应聘本公司各类岗位使用。</p>
+      <div class="flex items-center justify-between">
+        <span class="text-gray-500 text-sm"><i class="fa fa-file-word-o mr-1"></i> 12 KB</span>
+        <!-- 修改href属性为实际文件路径 -->
+        <a href="../resource/招聘简历模板.docx" class="btn-primary" download>
+          <i class="fa fa-download mr-2"></i> 下载
+        </a>
+      </div>
+    </div>
+  </div>
+        
+      </div>
+      
+          
+      <!-- 提示信息 -->
+      <div class="mt-10 bg-blue-50 border-l-4 border-blue-400 p-4 rounded">
+        <div class="flex">
+          <div class="flex-shrink-0">
+            <i class="fa fa-info-circle text-blue-500 text-xl"></i>
+          </div>
+          <div class="ml-3">
+            <p class="text-sm text-blue-700">
+              所有下载资源仅供客户参考使用，未经授权不得用于商业用途。如遇下载问题，请联系客服热线：400-123-4567
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+ 
+  <!-- 页脚 -->
+  <footer class="bg-dark text-white pt-16 pb-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div>
+                <div class="flex items-center space-x-2 mb-6">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                        <img src="../img/icon/ahqy.jpg" alt="安徽青园集团" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <span class="text-xl font-display font-bold text-white">安徽青园集团</span>
+                </div>
+                <p class="text-gray-400 mb-6">
+                    青园集团愿与全国相关企业联盟发展，竭诚合作，用八方资源，打造"机械强农"商业典范。
+                </p>
+                <div
+                    class="flex space-x-4">
+                    <!-- 页脚微信图标添加二维码功能 -->
+                    <div class="relative" id="footer-wechat-container">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" id="footer-wechat-icon">
+                            <i class="fa fa-weixin"></i>
+                        </a>
+                        <!-- 页脚微信二维码 -->
+                        <div class="qrcode-tooltip absolute bottom-full left-0 transform -translate-x-[10px] mb-4 bg-white p-4 rounded-xl shadow-lg z-20">
+                            <div class="text-center">
+                                <img src="../img/qrcode/qh-school.jpg" alt="安徽青园集团微信公众号二维码" class="w-full h-auto rounded-lg shadow-sm">
+                                <p class="text-xs text-gray-600 mt-2 font-medium">扫码关注微信公众号</p>
+                            </div>
+                            <!-- 调整箭头位置，使其指向微信图标 -->
+                            <div class="absolute bottom-[-8px] left-[20px] transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-white"></div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" id="footer-wechat-icon">
+                        <i class="fa fa-qq text-lg"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" id="footer-wechat-icon">
+                        <i class="fa fa-weibo text-lg"></i>
+                    </a>
+
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" id="footer-wechat-icon">
+                        <svg t="1753082413186" class="icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5374" width="200" height="200">
+                            <path d="M899.8 594.1c-15.4 31.9-31.8 40.6-65.7 35.3-21.8-3.4-33.7-16.2-37-41.7 13.2 0 26.2-0.3 39.1 0.1 8.7 0.3 12.7-2.6 12.3-11.8-0.5-13.2 0.1-26.6-0.3-39.8-0.4-11.1-6.4-18.3-17.7-18.5-22.7-0.5-45.4-0.2-70.3-0.2V630h-50.6V518.3h-51v-52h49.6v-44.1h-32.9v-50.8c10.8-0.5 21.2-1.1 33.5-1.6v-17.6h51c-2 14.2 3.6 18.8 18.3 19 39.2 0.6 59.8 22.7 60.5 62 0.2 10.8 0.1 21.6 0.1 33.5 31.6-1.5 51.1 11.6 61.3 38.4v89h-0.2zM759.9 419.8c0 15.5-0.6 27.1 0.4 38.5 0.3 2.9 5.7 7.6 8.8 7.6 6.2 0.1 17.5-2 17.7-4.2 1.3-11.8 1.8-24.5-1.7-35.6-1.2-3.8-14.5-3.9-25.2-6.3z m-494-67.7c-0.1 77.4-0.1 154.8-0.5 232.1-0.2 33.1-20.9 50.8-52.2 45.6-20.5-3.4-31.5-17.2-32.3-41.6h34v-236c17.1-0.1 34.1-0.1 51-0.1z m216.6 0C470 377 456.1 401.3 447.2 425c20.8-1.2 39.4-2.3 61.7-3.6-11.8 23.7-22.2 44.8-32.7 65.8-1.4 2.8-2.8 5.8-4.2 8.6-11 22-10.9 22 13.4 22.7 2.5 0.1 5 0.4 9.7 0.8-6.8 13.4-12.8 25.6-19.3 37.6-1.1 2-4 4.2-6 4.2-18-0.1-36.1 0.6-54-1.4-12.9-1.5-17.9-11.2-12.8-23.6 6.2-15.2 13.4-29.9 20.2-44.9 2.3-5.1 4.6-10.3 8.1-17.9-10 0-17.2 0.2-24.5-0.1-21.5-0.7-28.6-10.3-19.8-29.8 14-30.9 29.6-61 44.4-91.5l51.1 0.2zM109.9 546.3c3.2-17.9 7.3-35.7 9.4-53.6 2.7-22.6 3.8-45.4 5.7-69.1h53.6c-9.1 61.3 1.8 126.2-38.4 182.6-10.7-18.9-20.6-36.2-30.4-53.6 0.1-2 0.1-4.1 0.1-6.3zM899.8 403c-11.5 19.9-29.6 20.5-49 17.4-5.8-25.3-1.6-41.9 11.9-48.1 12.6-5.8 24.1-1.2 37.2 14.8l-0.1 15.9z" p-id="5375" fill="#ffffff"></path>
+                            <path d="M604.9 579.7c14 0 27.1 0.3 40.2-0.1 8.2-0.2 10.8 3.2 11.3 11.2 2.5 40.2 2.8 40.2-37.9 40.2H474.7c8.9-17.6 16.2-33.1 24.7-47.8 1.6-2.8 8.5-3.3 12.9-3.4 12.7-0.5 25.4-0.2 39.3-0.2V422.1h-32.5v-50H637v49.2h-32.2c0.1 53.2 0.1 104.7 0.1 158.4zM302.1 423.1h50.2c2.4 31 1.4 62.3 8.1 91.8 7.9 34.5-4.7 61.3-21 88.5-24.4-21.4-37.7-85.3-37.3-180.3zM392.6 579H474c-9.1 17.8-16.3 32.3-24.1 46.5-1.5 2.6-5.8 5.1-8.8 5.1-23.7 0.4-47.5 0.2-74.7 0.2 10.3-20.4 18.8-37.1 26.2-51.8z" p-id="5376" fill="#ffffff"></path>
+                        </svg>
+                    </a>
+
+                    <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" id="footer-wechat-icon" href="https://www.douyin.com/user/MS4wLjABAAAAQ1njIFuE-nyc9zxHpEpEKvx2qN67GaFjW6ZcY1Xo2E8?from_tab_name=main" target="_blank" class="text-gray-400 hover:text-white transition-colors w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                        <svg t="1753083581352" class="icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10540" width="200" height="200">
+                            <path d="M523.377778 312.888889v273.066667c0 31.288889-25.6 56.888889-56.888889 56.888888s-56.888889-25.6-56.888889-56.888888 25.6-56.888889 56.888889-56.888889c5.688889 0 11.377778 0 17.066667 2.844444v-68.266667h-17.066667c-68.266667 0-125.155556 56.888889-125.155556 125.155556 0 68.266667 56.888889 125.155556 125.155556 125.155556 68.266667 0 125.155556-56.888889 125.155555-125.155556v-139.377778c28.444444 19.911111 59.733333 31.288889 93.866667 31.288889v-68.266667c-51.2 0-93.866667-42.666667-93.866667-93.866666h-68.266666z" fill="#ffffff" p-id="10541"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6">联系方式</h4>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                        <span class="text-gray-400">安徽省安庆市青园农机城</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa fa-phone text-primary mt-1 mr-3"></i>
+                        <span class="text-gray-400">0556-123456</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa fa-envelope text-primary mt-1 mr-3"></i>
+                        <span class="text-gray-400">info@ahqy.com</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                        <span class="text-gray-400">周一至周日 8:00-18:00</span>
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="relative">
+                <!-- 右移标题右移并处于两列之间 -->
+                <h4 class="text-lg font-bold mb-6 pl-6 md:pl-0 md:absolute md:left-[50%] md:-translate-x-[3.5rem]">快速链接</h4>
+
+                <!-- 双列布局的链接列表 -->
+                <ul class="quick-links-container text-gray-400 pt-8">
+                  <li class="quick-links-item">
+                      <a href="index.html" class="text-gray-400 hover:text-white transition-colors">首页</a>
+                  </li>
+                  <li class="quick-links-item">
+                      <a href="market.html" class="text-gray-400 hover:text-white transition-colors">农机大市场</a>
+                  </li>
+                  <li class="quick-links-item">
+                      <a href="merchants.html" class="text-gray-400 hover:text-white transition-colors">商铺展示</a>
+                  </li>
+                  <li class="quick-links-item">
+                      <a href="products.html" class="text-gray-400 hover:text-white transition-colors">产品中心</a>
+                  </li>
+                  <li class="quick-links-item">
+                      <a href="testimonials.html" class="text-gray-400 hover:text-white transition-colors">客户评价</a>
+                  </li>
+                  <li class="quick-links-item">
+                      <a href="services.html" class="text-gray-400 hover:text-white transition-colors">服务优势</a>
+                  </li>
+                  <li class="quick-links-item">
+                      <a href="culture.html" class="text-gray-400 hover:text-white transition-colors">文化理念</a>
+                  </li>
+             
+                  <li class="quick-links-item">
+                      <a href="news.html" class="text-gray-400 hover:text-white transition-colors">新闻动态</a>
+                  </li>
+                  <li class="quick-links-item">
+                      <a href="media.html" class="text-gray-400 hover:text-white transition-colors">媒体看青园</a>
+                  </li>
+                  <li class="quick-links-item">
+                      <a href="jobs.html" class="text-gray-400 hover:text-white transition-colors">人才招聘</a>
+                  </li>
+                  <li class="quick-links-item">
+                      <a href="investment.html" class="text-gray-400 hover:text-white transition-colors">招商中心</a>
+                  </li> 
+                    <li class="quick-links-item">
+                      <a href="dowmload.html" class="text-gray-400 hover:text-white transition-colors">下载中心</a>
+                  </li>
+                  <li class="quick-links-item">
+                      <a href="detail.html" class="text-gray-400 hover:text-white transition-colors">关于我们</a>
+                  </li>
+                  <li class="quick-links-item">
+                      <a href="index.html#contact.html"
+                          class="text-gray-400 hover:text-white transition-colors">联系我们</a>
+                  </li>
+              </ul>
+            </div>
+
+            <style>
+                /* 保持原有双列布局样式 */
+                .quick-links-container {
+                    column-count: 2;
+                    column-gap: 4rem; /* 加大列间距，为标题留出空间 */
+                }
+
+                .quick-links-item {
+                    break-inside: avoid;
+                    margin-bottom: 0.8rem;
+                }
+
+                /* 响应式调整 */
+                @media(max-width: 768px) {
+                    .quick-links-container {
+                        column-count: 1;
+                        column-gap: 0;
+                    }
+                    h4.md\:absolute {
+                        position: static;
+                        transform: none;
+                        left: 0;
+                        pl: 0;
+                    }
+                }
+            </style>
+
+            <!-- 配套CSS样式 (已添加到原有样式表中) -->
+            <style>
+                .quick-links-container {
+                    column-count: 2;
+                    column-gap: 1.5rem;
+                }
+
+                .quick-links-item {
+                    break-inside: avoid; /* 防止链接被分割到不同列 */
+                    margin-bottom: 0.8rem;
+                }
+
+                /* 响应式调整 - 移动端恢复单列 */
+                @media(max-width: 768px) {
+                    .quick-links-container {
+                        column-count: 1;
+                    }
+                }
+            </style>
+
+            <div>
+                <h4 class="text-lg font-bold mb-6">微信公众号</h4>
+                <div class="bg-white p-3 inline-block rounded-lg">
+                    <img src="../img/qrcode/qh-school.jpg" alt="微信公众号二维码" class="w-36 h-36">
+                </div>
+                <p class="text-xs text-gray-400 mt-2 font-medium">扫码关注获取更多资讯</p>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                &copy; 2025 安徽青园集团. 保留所有权利.
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">隐私政策</a>
+                <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">使用条款</a>
+                <a href="map.html" class="text-gray-400 hover:text-white text-sm transition-colors">网站地图</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+  <!-- 返回顶部按钮 -->
+     <!-- 回到顶部按钮 -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform translate-y-20 opacity-0 transition-all duration-300">
+        <i class="fa fa-angle-up text-xl"></i>
+    </button>
+
+  <!-- JavaScript -->
+
+<script>
+    // 资源筛选功能
+    const categoryTags = document.querySelectorAll('.category-tag');
+    const downloadItems = document.querySelectorAll('.download-item');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const searchInput = document.getElementById('searchInput');
+    const sortFilter = document.getElementById('sortFilter');
+    
+    // 分类标签点击事件
+    categoryTags.forEach(tag => {
+      tag.addEventListener('click', () => {
+        // 更新标签样式
+        categoryTags.forEach(t => {
+          t.classList.remove('active', 'bg-primary', 'text-white');
+          t.classList.add('bg-gray-200', 'hover:bg-gray-300');
+        });
+        tag.classList.add('active', 'bg-primary', 'text-white');
+        tag.classList.remove('bg-gray-200', 'hover:bg-gray-300');
+        
+        // 更新下拉筛选器
+        categoryFilter.value = tag.dataset.category;
+        
+        // 筛选资源
+        filterResources();
+      });
+    });
+    
+    // 下拉筛选器变化事件
+    categoryFilter.addEventListener('change', () => {
+      // 更新标签样式
+      categoryTags.forEach(tag => {
+        if (tag.dataset.category === categoryFilter.value) {
+          tag.classList.add('active', 'bg-primary', 'text-white');
+          tag.classList.remove('bg-gray-200', 'hover:bg-gray-300');
+        } else {
+          tag.classList.remove('active', 'bg-primary', 'text-white');
+          tag.classList.add('bg-gray-200', 'hover:bg-gray-300');
+        }
+      });
+      
+      // 筛选资源
+      filterResources();
+    });
+    
+    // 搜索输入事件
+    searchInput.addEventListener('input', filterResources);
+    
+    // 排序筛选器变化事件
+    sortFilter.addEventListener('change', sortResources);
+    
+    // 筛选资源函数
+    function filterResources() {
+      const selectedCategory = categoryFilter.value;
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      
+      downloadItems.forEach(item => {
+        const itemCategory = item.dataset.category;
+        const itemTitle = item.querySelector('h3').textContent.toLowerCase();
+        const itemDesc = item.querySelector('p').textContent.toLowerCase();
+        
+        const categoryMatch = selectedCategory === 'all' || itemCategory === selectedCategory;
+        const searchMatch = searchTerm === '' || itemTitle.includes(searchTerm) || itemDesc.includes(searchTerm);
+        
+        if (categoryMatch && searchMatch) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+      
+      // 筛选后重新排序
+      sortResources();
+    }
+    
+    // 排序资源函数
+    function sortResources() {
+      const sortType = sortFilter.value;
+      const visibleItems = Array.from(downloadItems).filter(item => item.style.display !== 'none');
+      
+      // 获取父容器
+      const container = document.querySelector('.grid');
+      
+      // 根据排序类型排序
+      visibleItems.sort((a, b) => {
+        const dateA = new Date(a.querySelector('.text-gray-500').textContent.split('·')[1].trim());
+        const dateB = new Date(b.querySelector('.text-gray-500').textContent.split('·')[1].trim());
+        const titleA = a.querySelector('h3').textContent.toLowerCase();
+        const titleB = b.querySelector('h3').textContent.toLowerCase();
+        const sizeA = parseFloat(a.querySelector('.text-gray-500').textContent.split(' ')[1]);
+        const sizeB = parseFloat(b.querySelector('.text-gray-500').textContent.split(' ')[1]);
+        
+        switch (sortType) {
+          case 'newest':
+            return dateB - dateA;
+          case 'oldest':
+            return dateA - dateB;
+          case 'name-asc':
+            return titleA.localeCompare(titleB);
+          case 'name-desc':
+            return titleB.localeCompare(titleA);
+          case 'size-desc':
+            return sizeB - sizeA;
+          case 'size-asc':
+            return sizeA - sizeB;
+          default:
+            return 0;
+        }
+      });
+      
+      // 重新排列DOM元素
+      visibleItems.forEach(item => {
+        container.appendChild(item);
+      });
+    }
+    
+    // 初始化页面时执行一次筛选和排序
+    filterResources();
+  </script>
+
+<script>
+// 1. 添加解析URL参数的工具函数
+function getUrlParam(name) {
+  // 匹配URL中"参数名=值"的部分
+  const reg = new RegExp(`(^|&)${name}=([^&]*)(&|$)`);
+  const r = window.location.search.substr(1).match(reg);
+  return r ? decodeURIComponent(r[2]) : null; // 返回参数值，无参数则返回null
+}
+
+// 2. 页面加载完成后执行自动筛选
+document.addEventListener('DOMContentLoaded', () => {
+  // 获取URL中的category参数（如"manual"、"recruitment"）
+  const targetCategory = getUrlParam('category');
+  
+  if (targetCategory) {
+    // 验证参数是否为有效分类（避免无效参数）
+    const validCategories = ['manual', 'instruction', 'brochure', 'technical', 'software', 'recruitment'];
+    if (validCategories.includes(targetCategory)) {
+      // 找到对应分类的标签并触发点击事件（自动筛选）
+      const categoryTag = document.querySelector(`.category-tag[data-category="${targetCategory}"]`);
+      if (categoryTag) {
+        categoryTag.click(); // 触发点击，自动执行筛选
+      }
+    }
+  }
+});
+</script>
+
+<!-- 导航栏滚动效果、移动端菜单切换、平滑滚动 -->
+<script src="../common/js/header-show.js"></script>
+
+<!-- 二维码显示关闭脚本  -->
+ <script src="../common/js/qrcode-show-footer.js"></script>
+
+ <!-- 返回顶部按钮 -->
+ <script src="../common/js/backtop.js"></script>
+
+</body>
+</html>

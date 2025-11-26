@@ -1,0 +1,2299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安徽青园集团(中国农机城)--百年企业 国际青园
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2E7D32', // 深绿色主色调
+                        secondary: '#FF9800', // 橙色辅助色
+                        dark: '#1A202C', // 深色文本
+                        light: '#F8FAFC', // 浅色背景
+                        neutral: '#4A5568', // 中性色
+                    },
+                    fontFamily: {
+                        sans: [
+                            'Inter', 'system-ui', 'sans-serif'
+                        ],
+                        display: ['Montserrat', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'custom': '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02)',
+                        'hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+                                                            .content-auto {
+                                                                content-visibility: auto;
+                                                            }
+                                                            .text-shadow {
+                                                                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                                                            }
+                                                            .bg-blur {
+                                                                backdrop-filter: blur(8px);
+                                                            }
+                                                            .animate-float {
+                                                                animation: float 6s ease-in-out infinite;
+                                                            }
+                                                            @keyframes float {
+                                                                0% { transform: translateY(0px); }
+                                                                50% { transform: translateY(-20px); }
+                                                                100% { transform: translateY(0px); }
+                                                            }
+                                                            .transition-transform {
+                                                                transition-property: transform;
+                                                                transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                                                                transition-duration: 300ms;
+                                                            }
+                                                       
+                                                
+                                                            .qrcode-tooltip {
+                                                                opacity: 0;
+                                                                visibility: hidden;
+                                                                transform: translateY(10px);
+                                                                transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+                                                                width: 200px; /* 固定宽度 */
+                                                            }
+                                                            .qrcode-tooltip.active {
+                                                                opacity: 1;
+                                                                visibility: visible;
+                                                                transform: translateY(0);
+                                                            }
+                                                
+                                                            @keyframes fadeIn {
+                                                                from { opacity: 0; transform: translateY(10px); }
+                                                                to { opacity: 0.95; transform: translateY(0); }
+                                                            }
+                                                
+                                                        }
+        </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-sans text-dark bg-light">
+    <!-- 导航栏 -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+
+                        <img src="../img/icon/ahqy.jpg" alt="" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <span class="text-xl font-display font-bold text-primary">安徽青园集团(中国农机城)</span>
+                </a>
+
+                <!-- 桌面导航 -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-dark hover:text-primary transition-colors font-medium">首页</a>
+                    <a href="#market" class="text-dark hover:text-primary transition-colors font-medium">农机大市场</a>
+                    <a href="#merchants" class="text-dark hover:text-primary transition-colors font-medium">商铺展示</a>
+                    <a href="#products" class="text-dark hover:text-primary transition-colors font-medium">产品中心</a>
+                    <a href="#testimonials" class="text-dark hover:text-primary transition-colors font-medium">客户评价</a>
+                    <a href="#services" class="text-dark hover:text-primary transition-colors font-medium">服务优势</a>
+                    <a href="#culture" class="text-dark hover:text-primary transition-colors font-medium">文化理念</a>
+                    <a href="#creat-platform"
+                        class="text-dark hover:text-primary transition-colors font-medium">清徽街三创平台</a>
+                    <a href="#dynamics" class="text-dark hover:text-primary transition-colors font-medium">项目投资动态</a>
+                    <a href="#news" class="text-dark hover:text-primary transition-colors font-medium">新闻动态</a>
+                    <a href="#media" class="text-dark hover:text-primary transition-colors font-medium">媒体看青园</a>
+                    <a href="#jobs" class="text-dark hover:text-primary transition-colors font-medium">人才招聘</a>
+                    <a href="#investment" class="text-dark hover:text-primary transition-colors font-medium">招商中心</a>
+                    <a href="#detail" class="text-dark hover:text-primary transition-colors font-medium">关于我们</a>
+                    <a href="#download" class="text-dark hover:text-primary transition-colors font-medium">下载中心</a>
+                    <a href="#contact" class="text-dark hover:text-primary transition-colors font-medium">联系我们</a>
+                </nav>
+
+                <!-- 联系按钮 -->
+                <a href="#contact"
+                    class="hidden md:block bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                    立即咨询
+                </a>
+
+                <!-- 移动端菜单按钮 -->
+                <button id="menu-toggle" class="md:hidden text-dark focus:outline-none">
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 bg-blur border-t border-gray-100 shadow-lg">
+            <div class="container mx-auto px-4 py-3 space-y-3">
+                <a href="#home" class="block py-2 text-dark hover:text-primary transition-colors">首页</a>
+                <a href="#market" class="block py-2 text-dark hover:text-primary transition-colors">农机大市场</a>
+                <a href="#merchants" class="block py-2 text-dark hover:text-primary transition-colors">商铺展示</a>
+                <a href="#products" class="block py-2 text-dark hover:text-primary transition-colors">产品中心</a>
+                <a href="#hot" class="block py-2 text-dark hover:text-primary transition-colors">热门产品</a>
+                <a href="#testimonials" class="block py-2 text-dark hover:text-primary transition-colors">客户评价</a>
+                <a href="#services" class="block py-2 text-dark hover:text-primary transition-colors">服务优势</a>
+                <a href="#culture" class="block py-2 text-dark hover:text-primary transition-colors">文化理念</a>
+                <a href="#creat-platform" class="block py-2 text-dark hover:text-primary transition-colors">清徽街三创平台</a>
+                <a href="#dynamics" class="block py-2 text-dark hover:text-primary transition-colors">项目投资动态</a>
+                <a href="#news" class="block py-2 text-dark hover:text-primary transition-colors">新闻动态</a>
+                <a href="#media" class="block py-2 text-dark hover:text-primary transition-colors">媒体看青园</a>
+                <a href="#jobs" class="block py-2 text-dark hover:text-primary transition-colors">人才招聘</a>
+                <a href="#investment" class="block py-2 text-dark hover:text-primary transition-colors">招商中心</a>
+                <a href="#detail" class="block py-2 text-dark hover:text-primary transition-colors">关于我们</a>
+                <a href="#download" class="block py-2 text-dark hover:text-primary transition-colors">下载中心</a>
+                <a href="#contact" class="block py-2 text-dark hover:text-primary transition-colors">联系我们</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 应用区 -->
+
+    <!-- 首页 -->
+    <section id="home" class="pt-28 md:pt-0 min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="../img/index/home-pic.jpg" alt="安徽青园规划图" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-dark/80 to-dark/40"></div>
+        </div>
+
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white space-y-6">
+                    <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-display font-bold leading-tight text-shadow">
+                        让中国农机走向世界<br>为世界农机搭建舞台
+                    </h1>
+                    <p class="text-[clamp(1rem,2vw,1.25rem)] text-gray-200 max-w-lg">
+                        新农机械提供全方位农业机械设备解决方案，从播种到收获，我们的产品帮助您提高效率、降低成本，实现农业现代化。
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#products"
+                            class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 font-medium">
+                            查看产品
+                        </a>
+                        <a href="#contact"
+                            class="bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-sm px-8 py-3 rounded-full transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 font-medium">
+                            联系我们
+                        </a>
+                        <a href="detail.html"
+                            class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 font-medium">
+                            了解更多
+                        </a>
+                    </div>
+
+                    <!-- 统计数据 -->
+                    <div class="grid grid-cols-3 gap-4 pt-8">
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-secondary">100+</div>
+                            <div class="text-gray-300 text-sm">产品型号</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-secondary">10k+</div>
+                            <div class="text-gray-300 text-sm">满意客户</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl md:text-4xl font-bold text-secondary">33年</div>
+                            <div class="text-gray-300 text-sm">行业经验</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden lg:block relative">
+                    <img src="../img/icon/ahqy.jpg" alt="大型拖拉机在田间作业"
+                        class="w-full h-auto rounded-xl shadow-2xl animate-float">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#market" class="text-white/70 hover:text-white transition-colors">
+                <i class="fa fa-angle-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 农机大市场模块 -->
+    <section id="market" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- 统一的标题样式 -->
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">专业市场</span>
+                <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] font-display font-bold text-dark mb-4">青园农机大市场</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">一站式农业机械采购与服务平台，汇聚全球优质农机产品</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div class="order-2 lg:order-1">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">现代化农机交易集散中心</h3>
+                    <p class="text-gray-600 mb-6 text-lg">
+                        青园农机大市场是华东地区规模最大的农业机械专业交易市场，
+                        占地面积达15万平方米，汇集了国内外300多个知名品牌，
+                        提供一站式农机选购、配件供应、维修保养和技术咨询服务。
+                    </p>
+
+                    <!-- 数据统计卡片 - 与其他页面保持一致 -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-2">300+</div>
+                            <div class="text-neutral text-sm">入驻品牌</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-2">3000+</div>
+                            <div class="text-neutral text-sm">产品种类</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-2">300亩</div>
+                            <div class="text-neutral text-sm">市场面积</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-primary mb-2">20亿+</div>
+                            <div class="text-neutral text-sm">年交易额</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 图片容器 - 比例协调且完整显示 -->
+                <div class="order-1 lg:order-2 relative group">
+                    <!-- 控制最大宽度并设置合适比例 -->
+                    <div class="max-w-lg mx-auto rounded-xl overflow-hidden shadow-custom">
+                        <!-- 使用max-width确保不超过容器，height:auto保持比例，object-fit:cover确保重要内容不被裁剪 -->
+                        <img src="../img/icon/ahqy.jpg" alt="青园农机大市场外观"
+                            class="w-full max-w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 市场特色区域 - 统一卡片样式 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+                class="bg-light rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-2">
+                <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
+                    <i class="fa fa-shopping-bag text-2xl text-primary"></i>
+                </div>
+                <h4 class="text-xl font-bold text-gray-800 mb-3">一站式采购</h4>
+                <p class="text-gray-600">
+                    涵盖拖拉机、收割机、播种机等全系列农业机械，满足不同农作物种植需求。
+                </p>
+            </div>
+
+            <div
+                class="bg-light rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-2">
+                <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
+                    <i class="fa fa-line-chart text-2xl text-primary"></i>
+                </div>
+                <h4 class="text-xl font-bold text-gray-800 mb-3">透明化价格</h4>
+                <p class="text-gray-600">
+                    明码标价，价格透明，提供产品性价比对比，让客户买得放心、用得舒心。
+                </p>
+            </div>
+
+            <div
+                class="bg-light rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 transform hover:-translate-y-2">
+                <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-5">
+                    <i class="fa fa-wrench text-2xl text-primary"></i>
+                </div>
+                <h4 class="text-xl font-bold text-gray-800 mb-3">全方位服务</h4>
+                <p class="text-gray-600">
+                    提供专业的售后维修、技术培训、配件供应等服务，解决客户后顾之忧。
+                </p>
+            </div>
+        </div>
+        <div class="mt-12 text-center">
+            <a href="market.html"
+                class="inline-block bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium px-8 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow">
+                了解更多
+                <i class="fa fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+        </div>
+    </section>
+
+    <!-- 青园城商户模块 -->
+    <section id="merchants" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 模块标题 -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">商业联盟</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark mb-4">青园城优质商户</h2>
+                <p class="text-neutral">
+                    汇聚农业全产业链优质商户，打造一站式农业服务平台，共创产业生态繁荣
+                </p>
+            </div>
+
+            <!-- 精选商户展示 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 商户1 -->
+                <div
+                    class="bg-white rounded-xl overflow-hidden shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-40 overflow-hidden bg-gray-100">
+                        <img src="https://picsum.photos/id/218/400/300" alt="绿源农机销售中心外观"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <span class="category-pill bg-blue-100 text-blue-800 mb-3 inline-block">农业机械</span>
+                        <h3 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors">绿源农机销售中心</h3>
+                        <div class="flex items-center text-sm text-neutral mb-3">
+                            <div class="rating-stars mr-2">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                            </div>
+                            <span>4.5 (128条评价)</span>
+                        </div>
+                        <p class="text-neutral text-sm line-clamp-2 mb-4">专注大中型农机销售与售后服务，提供农机租赁解决方案</p>
+                        <a href="merchants.html"
+                            class="inline-flex items-center text-primary text-sm font-medium hover:underline">
+                            了解详情
+                            <i class="fa fa-angle-right ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 商户2 -->
+                <div
+                    class="bg-white rounded-xl overflow-hidden shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-40 overflow-hidden bg-gray-100">
+                        <img src="https://picsum.photos/id/225/400/300" alt="丰谷农资超市内部"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <span class="category-pill bg-green-100 text-green-800 mb-3 inline-block">农资供应</span>
+                        <h3 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors">丰谷农资超市</h3>
+                        <div class="flex items-center text-sm text-neutral mb-3">
+                            <div class="rating-stars mr-2">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <span>4.9 (215条评价)</span>
+                        </div>
+                        <p class="text-neutral text-sm line-clamp-2 mb-4">提供优质种子、化肥、农药等农业生产资料，质量可靠</p>
+                        <a href="merchants.html"
+                            class="inline-flex items-center text-primary text-sm font-medium hover:underline">
+                            了解详情
+                            <i class="fa fa-angle-right ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 商户3 -->
+                <div
+                    class="bg-white rounded-xl overflow-hidden shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-40 overflow-hidden bg-gray-100">
+                        <img src="https://picsum.photos/id/237/400/300" alt="智慧农业技术服务"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <span class="category-pill bg-purple-100 text-purple-800 mb-3 inline-block">农技服务</span>
+                        <h3 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors">智慧农业技术服务中心</h3>
+                        <div class="flex items-center text-sm text-neutral mb-3">
+                            <div class="rating-stars mr-2">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <span>4.0 (97条评价)</span>
+                        </div>
+                        <p class="text-neutral text-sm line-clamp-2 mb-4">提供现代农业技术咨询、土壤检测、病虫害防治服务</p>
+                        <a href="merchants.html"
+                            class="inline-flex items-center text-primary text-sm font-medium hover:underline">
+                            了解详情
+                            <i class="fa fa-angle-right ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 商户4 -->
+                <div
+                    class="bg-white rounded-xl overflow-hidden shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-40 overflow-hidden bg-gray-100">
+                        <img src="https://picsum.photos/id/240/400/300" alt="农鲜达物流运输"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <span class="category-pill bg-red-100 text-red-800 mb-3 inline-block">物流运输</span>
+                        <h3 class="text-lg font-bold mb-2 group-hover:text-primary transition-colors">农鲜达物流有限公司</h3>
+                        <div class="flex items-center text-sm text-neutral mb-3">
+                            <div class="rating-stars mr-2">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                            <span>3.5 (76条评价)</span>
+                        </div>
+                        <p class="text-neutral text-sm line-clamp-2 mb-4">专业农产品运输配送服务，冷藏保鲜车全程温控</p>
+                        <a href="merchants.html"
+                            class="inline-flex items-center text-primary text-sm font-medium hover:underline">
+                            了解详情
+                            <i class="fa fa-angle-right ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 查看更多按钮 -->
+            <div class="mt-12 text-center">
+                <a href="merchants.html"
+                    class="inline-block bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium px-8 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow">
+                    查看全部商户
+                    <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品分类 -->
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">产品中心</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark">
+                    丰富的农机产品种类
+                </h2>
+                <p class="text-neutral max-w-2xl mx-auto mt-4">
+                    我们提供全方位的农业机械设备，满足不同规模农场的需求，从耕作到收获，一站式采购。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 产品类别1 -->
+                <div
+                    class="bg-white rounded-xl overflow-hidden shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://picsum.photos/id/133/600/400" alt="耕作机械"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+                            <i class="fa fa-cogs text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">耕作机械</h3>
+                        <p class="text-neutral mb-4">包括拖拉机、犁、耙、旋耕机等，为土地准备提供全面解决方案。</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium group-hover:underline">
+                            查看详情
+                            <i class="fa fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 产品类别2 -->
+                <div
+                    class="bg-white rounded-xl overflow-hidden shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://picsum.photos/id/156/600/400" alt="种植机械"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+                            <i class="	fa fa-truck text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">种植机械</h3>
+                        <p class="text-neutral mb-4">提供播种机、插秧机、移栽机等，实现精准种植，提高作物产量。</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium group-hover:underline">
+                            查看详情
+                            <i class="fa fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 产品类别3 -->
+                <div
+                    class="bg-white rounded-xl overflow-hidden shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://picsum.photos/id/128/600/400" alt="收获机械"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+                            <i class="	fa fa-truck text-xl"></i>
+
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">收获机械</h3>
+                        <p class="text-neutral mb-4">联合收割机、脱粒机等设备，帮助您高效完成收获季节的工作。</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium group-hover:underline">
+                            查看详情
+                            <i class="fa fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 产品类别4 -->
+                <div
+                    class="bg-white rounded-xl overflow-hidden shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://picsum.photos/id/131/600/400" alt="灌溉设备"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+                            <i class="fa fa-tint text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">灌溉设备</h3>
+                        <p class="text-neutral mb-4">提供喷灌、滴灌系统和水泵等设备，高效利用水资源，降低生产成本。</p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium group-hover:underline">
+                            查看详情
+                            <i class="fa fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="products.html"
+                    class="inline-block bg-white border border-primary text-primary hover:bg-primary hover:text-white transition-colors px-8 py-3 rounded-full font-medium shadow-md hover:shadow-lg">
+                    查看全部产品
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 客户评价 -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">客户评价</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark">
+                    来自我们客户的声音
+                </h2>
+                <p class="text-neutral max-w-2xl mx-auto mt-4">
+                    听听使用过我们农机设备的农场主们怎么说，他们的真实反馈是我们不断进步的动力。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 评价1 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-custom relative">
+                    <div class="text-primary text-4xl absolute -top-4 -left-2 opacity-20">"</div>
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="text-neutral mb-6 relative z-10">
+                        "新农机械的拖拉机质量非常好，动力强劲，操作简单。我们农场已经购买了3台，使用了5年多，几乎没有出现过故障，售后服务也很到位。"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1012/100/100" alt="张老板"
+                            class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <div class="font-bold">张老板</div>
+                            <div class="text-sm text-gray-500">大型农场主 · 山东</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 评价2 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-custom relative">
+                    <div class="text-primary text-4xl absolute -top-4 -left-2 opacity-20">"</div>
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p class="text-neutral mb-6 relative z-10">
+                        "购买的插秧机让我们的种植效率提高了三倍，以前需要20个人的工作量，现在只需要5个人就能完成。而且机器的稳定性很好，值得推荐！"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1027/100/100" alt="李经理"
+                            class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <div class="font-bold">李经理</div>
+                            <div class="text-sm text-gray-500">农业合作社 · 江苏</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 评价3 -->
+                <div class="bg-gray-50 p-8 rounded-xl shadow-custom relative">
+                    <div class="text-primary text-4xl absolute -top-4 -left-2 opacity-20">"</div>
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                    <p class="text-neutral mb-6 relative z-10">
+                        "联合收割机的收割效果非常好，损失率低，收割速度快。去年麦收季节，我们用这台机器帮助周围的农户收割，赚了不少钱。"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://picsum.photos/id/1074/100/100" alt="王师傅"
+                            class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <div class="font-bold">王师傅</div>
+                            <div class="text-sm text-gray-500">农机服务站 · 河南</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="testimonials.html"
+                    class="inline-block bg-white border border-primary text-primary hover:bg-primary hover:text-white transition-colors px-8 py-3 rounded-full font-medium shadow-md hover:shadow-lg">
+                    查看全部评论
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务优势 -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">服务优势</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark">
+                    为什么选择我们的农机设备
+                </h2>
+                <p class="text-neutral max-w-2xl mx-auto mt-4">
+                    我们不仅提供优质的农业机械产品，更提供全方位的解决方案和服务，确保您的投资获得最大回报。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 优势1 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-custom hover:shadow-hover transition-all duration-300 border-l-4 border-primary">
+                    <div
+                        class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+                        <i class="fa fa-certificate text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">优质产品</h3>
+                    <p class="text-neutral">
+                        所有产品均经过严格质量检测，采用高品质材料制造，确保耐用性和可靠性，为您的农业生产保驾护航。
+                    </p>
+                </div>
+
+                <!-- 优势2 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-custom hover:shadow-hover transition-all duration-300 border-l-4 border-primary">
+                    <div
+                        class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+                        <i class="fa fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">专业团队</h3>
+                    <p class="text-neutral">
+                        我们拥有经验丰富的技术团队，提供专业的售前咨询、售中指导和售后服务，帮助您选择最适合的设备。
+                    </p>
+                </div>
+
+                <!-- 优势3 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-custom hover:shadow-hover transition-all duration-300 border-l-4 border-primary">
+                    <div
+                        class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+                        <i class="fa fa-wrench text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">快速维修</h3>
+                    <p class="text-neutral">
+                        全国联保，响应迅速的维修团队，确保您的设备在出现问题时能尽快恢复工作，减少生产损失。
+                    </p>
+                </div>
+
+                <!-- 优势4 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-custom hover:shadow-hover transition-all duration-300 border-l-4 border-primary">
+                    <div
+                        class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+                        <i class="fa fa-book text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">技术培训</h3>
+                    <p class="text-neutral">
+                        提供全面的操作培训和技术支持，让您的团队能够熟练使用和维护设备，充分发挥其性能优势。
+                    </p>
+                </div>
+
+                <!-- 优势5 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-custom hover:shadow-hover transition-all duration-300 border-l-4 border-primary">
+                    <div
+                        class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+                        <i class="fa fa-truck text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">全国配送</h3>
+                    <p class="text-neutral">
+                        完善的物流网络，快速高效的配送服务，无论您身在何处，都能及时收到所需的设备和配件。
+                    </p>
+                </div>
+
+                <!-- 优势6 -->
+                <div
+                    class="bg-white p-8 rounded-xl shadow-custom hover:shadow-hover transition-all duration-300 border-l-4 border-primary">
+                    <div
+                        class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+                        <i class="fa fa-tag text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">合理价格</h3>
+                    <p class="text-neutral">
+                        我们提供高性价比的产品，直接从厂家到用户，省去中间环节，为您节省采购成本。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 服务链接跳转按钮  -->
+        <div class="text-center mt-12">
+            <a href="services.html"
+                class="inline-block bg-white border border-primary text-primary hover:bg-primary hover:text-white transition-colors px-8 py-3 rounded-full font-medium shadow-md hover:shadow-lg">
+                查看全部服务信息
+            </a>
+    </section>
+
+    <!-- 文化理念模块 -->
+    <section id="culture" class="py-20 bg-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-16">
+                    <span
+                        class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">文化理念</span>
+                    <h2 class="text-[clamp(1.75rem,3vw,2.5rem)] font-bold text-primary mb-4">青园文化理念</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">我们的核心价值观和文化体系，指引着青园集团不断前行</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- 青园使命 -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-8 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fa fa-eye text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-4 text-gray-800">青园使命</h3>
+                        <p class="text-gray-600 text-center"></p>
+                        <p>让中国农民为自己而骄傲！</p>
+                        <P>
+                            帮助1万农民成为现代农场主！
+                        </P>
+                        帮助100万农民成为农村致富带头人！
+                        </p>
+                    </div>
+
+                    <!-- 核心价值观 -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-8 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fa fa-heart text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-4 text-gray-800">核心价值观</h3>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>以客户为中心，以奋斗者为本</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>简单开明，勤劳朴实，止于至善</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                                <span>自由 爱</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 企业精神 -->
+                    <div
+                        class="bg-white rounded-xl shadow-lg p-8 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                        <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                            <i class="fa fa-rocket text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-center mb-4 text-gray-800">企业精神</h3>
+                        <p class="text-gray-600 text-center"></p>
+                        <p>团队理念：开心工作，快乐生活，勇往直前！</p>
+                        <p>管理理念：真人真心真本事！</p>
+                        <p>经营理念：一生朋友，终生服务，确保每个客户成功！</p>
+                        <p>企业意志：农民精神！</p>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center">
+                    <a href="culture.html"
+                        class="inline-block bg-white border border-primary text-primary hover:bg-primary hover:text-white transition-colors px-8 py-3 rounded-full font-medium shadow-md hover:shadow-lg">
+                        了解更多文化理念
+                        <i class="fa fa-long-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+    </section>
+
+    <!-- 三创平台模块 -->
+    <section id="creat-platform" class="py-16 bg-white from-primary/5 to-primary/10">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">创新创业创造</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark">
+                    安庆清徽街大学生三创平台
+                </h2>
+                <p class="text-neutral max-w-2xl mx-auto mt-4">
+                    为大学生创业者提供全方位支持，从创意孵化到市场对接的完整生态体系
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white p-6 rounded-xl shadow-custom text-center card-hover">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-5">
+                        <i class="fa fa-lightbulb-o text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">创业项目合作</h3>
+                    <p class="text-neutral">
+                        涵盖农业科技、农村电商、乡村文创等多个领域，寻找具有创新潜力的优质项目
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-custom text-center card-hover">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-5">
+                        <i class="fa fa-money text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">创业投资支持</h3>
+                    <p class="text-neutral">
+                        提供种子轮、天使轮、成长轮等多阶段投资，助力项目从孵化到规模化发展
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-custom text-center card-hover">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-5">
+                        <i class="fa fa-handshake-o text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">创业扶持政策</h3>
+                    <p class="text-neutral">
+                        提供场地支持、资金补贴、导师指导、资源对接等多元化扶持政策
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <div class="flex items-center">
+                        <span class="text-3xl font-bold text-primary mr-2">50+</span>
+                        <span class="text-neutral">创业团队</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-3xl font-bold text-primary mr-2">30+</span>
+                        <span class="text-neutral">优质项目</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-3xl font-bold text-primary mr-2">¥2800万</span>
+                        <span class="text-neutral">累计投资</span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="text-3xl font-bold text-primary mr-2">75%</span>
+                        <span class="text-neutral">项目存活率</span>
+                    </div>
+                </div>
+
+                <a href="creat-platform.html"
+                    class="inline-block bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium px-8 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow">
+                    了解更多 <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目投资动态模块 -->
+    <section id="dynamics" class="py-20 bg-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 模块标题 -->
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">投资动态</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark">
+                    最新项目投资动态
+                </h2>
+                <p class="text-neutral max-w-2xl mx-auto mt-4">
+                    实时了解安徽青园集团各类投资项目的最新进展、投资规模及预期效益
+                </p>
+            </div>
+
+            <!-- 投资数据概览 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-custom transform transition-all hover:shadow-hover hover:-translate-y-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-neutral font-medium">总投资项目</h3>
+                        <i class="fa fa-folder-open text-primary text-xl"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-dark mb-2">28</p>
+                    <div class="flex items-center text-green-500 text-sm">
+                        <i class="fa fa-arrow-up mr-1"></i>
+                        <span>较去年增长 12%</span>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-xl shadow-custom transform transition-all hover:shadow-hover hover:-translate-y-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-neutral font-medium">总投资金额</h3>
+                        <i class="fa fa-money text-primary text-xl"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-dark mb-2">¥18.5亿</p>
+                    <div class="flex items-center text-green-500 text-sm">
+                        <i class="fa fa-arrow-up mr-1"></i>
+                        <span>较去年增长 23%</span>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-xl shadow-custom transform transition-all hover:shadow-hover hover:-translate-y-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-neutral font-medium">在建项目</h3>
+                        <i class="fa fa-cogs text-primary text-xl"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-dark mb-2">12</p>
+                    <div class="flex items-center text-green-500 text-sm">
+                        <i class="fa fa-arrow-up mr-1"></i>
+                        <span>较上月增长 8%</span>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-xl shadow-custom transform transition-all hover:shadow-hover hover:-translate-y-1">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-neutral font-medium">已投产项目</h3>
+                        <i class="fa fa-check-circle text-primary text-xl"></i>
+                    </div>
+                    <p class="text-3xl font-bold text-dark mb-2">16</p>
+                    <div class="flex items-center text-green-500 text-sm">
+                        <i class="fa fa-arrow-up mr-1"></i>
+                        <span>较去年增长 15%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 最新投资动态列表 -->
+            <div class="space-y-8 mb-12">
+                <!-- 动态1 -->
+                <article
+                    class="bg-white p-6 rounded-xl shadow-custom transform transition-all hover:shadow-hover hover:-translate-y-1">
+                    <div class="flex flex-col md:flex-row md:items-center gap-6">
+                        <div class="md:w-1/6">
+                            <img src="https://picsum.photos/300/300?random=20" alt="青园现代农业产业园外观"
+                                class="w-full h-40 object-cover rounded-lg" loading="lazy">
+                        </div>
+                        <div class="md:w-4/6">
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <h4 class="text-lg font-bold">青园现代农业产业园项目签约仪式成功举行</h4>
+                                <span
+                                    class="bg-primary/10 text-primary px-2 py-0.5 rounded text-xs font-medium">新签约</span>
+                            </div>
+                            <p class="text-neutral mb-3">
+                                2024年5月18日，安徽青园集团与芜湖市政府正式签署现代农业产业园项目合作协议，项目总投资5.6亿元，将建设集种植、加工、销售于一体的现代农业示范基地。
+                            </p>
+                            <div class="flex items-center text-sm text-neutral">
+                                <span class="flex items-center mr-4"><i class="fa fa-calendar-o mr-1"></i>
+                                    2024-05-18</span>
+                                <span class="flex items-center"><i class="fa fa-map-marker mr-1"></i> 芜湖市</span>
+                            </div>
+                        </div>
+                        <div class="md:w-1/6 flex items-center justify-center md:justify-end">
+                            <a href="dynamics.html" class="text-primary font-medium hover:underline flex items-center">
+                                查看详情 <i class="fa fa-angle-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 动态2 -->
+                <article
+                    class="bg-white p-6 rounded-xl shadow-custom transform transition-all hover:shadow-hover hover:-translate-y-1">
+                    <div class="flex flex-col md:flex-row md:items-center gap-6">
+                        <div class="md:w-1/6">
+                            <img src="https://picsum.photos/300/300?random=21" alt="智能农机研发中心建设现场"
+                                class="w-full h-40 object-cover rounded-lg" loading="lazy">
+                        </div>
+                        <div class="md:w-4/6">
+                            <div class="flex flex-wrap items-center gap-3 mb-2">
+                                <h4 class="text-lg font-bold">智能农机研发中心主体结构封顶</h4>
+                                <span
+                                    class="bg-blue-100 text-blue-800 px-2 py-0.5 rounded text-xs font-medium">建设中</span>
+                            </div>
+                            <p class="text-neutral mb-3">
+                                总投资3.2亿元的智能农机研发中心项目于近日完成主体结构封顶，预计2024年12月正式投入使用。项目建成后将成为华东地区领先的农业机械研发创新基地。
+                            </p>
+                            <div class="flex items-center text-sm text-neutral">
+                                <span class="flex items-center mr-4"><i class="fa fa-calendar-o mr-1"></i>
+                                    2024-04-30</span>
+                                <span class="flex items-center"><i class="fa fa-map-marker mr-1"></i> 安庆市</span>
+                            </div>
+                        </div>
+                        <div class="md:w-1/6 flex items-center justify-center md:justify-end">
+                            <a href="dynamics.html" class="text-primary font-medium hover:underline flex items-center">
+                                查看详情 <i class="fa fa-angle-right ml-1"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- 查看更多按钮 -->
+            <div class="text-center">
+                <a href="dynamics.html"
+                    class="inline-block bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium px-8 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow">
+                    查看全部投资动态
+                    <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 新闻动态 -->
+    <section id="news" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">新闻动态</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark">
+                    最新行业资讯与公司动态
+                </h2>
+                <p class="text-neutral max-w-2xl mx-auto mt-4">
+                    了解安徽青园集团的最新动态、行业资讯和农机技术发展趋势。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 新闻1 -->
+                <div
+                    class="bg-gray-50 rounded-xl overflow-hidden shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://picsum.photos/id/145/600/400" alt="青园集团参加2023国际农业机械展"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <i class="fa fa-calendar mr-2 text-primary"></i>
+                            <span>2023-09-15</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">青园集团参加2023国际农业机械展
+                        </h3>
+                        <p class="text-neutral mb-4 line-clamp-3">
+                            安徽青园集团携最新研发的智能农机产品亮相国际农业机械展，展示了我国现代农业装备的最新技术成果，吸引了众多国内外客户关注。
+                        </p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium group-hover:underline">
+                            阅读全文
+                            <i class="fa fa-long-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 新闻2 -->
+                <div
+                    class="bg-gray-50 rounded-xl overflow-hidden shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://picsum.photos/id/164/600/400" alt="青园集团与多家农业合作社签订战略合作协议"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <i class="fa fa-calendar mr-2 text-primary"></i>
+                            <span>2023-08-28</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                            青园集团与多家农业合作社签订战略合作协议</h3>
+                        <p class="text-neutral mb-4 line-clamp-3">
+                            为推动农业现代化进程，青园集团近日与省内10家大型农业合作社签订战略合作协议，将提供全套农机设备及技术支持服务。
+                        </p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium group-hover:underline">
+                            阅读全文
+                            <i class="fa fa-long-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 新闻3 -->
+                <div
+                    class="bg-gray-50 rounded-xl overflow-hidden shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://picsum.photos/id/175/600/400" alt="青园集团推出新一代智能灌溉系统"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <i class="fa fa-calendar mr-2 text-primary"></i>
+                            <span>2023-07-10</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">青园集团推出新一代智能灌溉系统
+                        </h3>
+                        <p class="text-neutral mb-4 line-clamp-3">
+                            青园集团研发的新一代智能灌溉系统正式上市，该系统可实现精准灌溉，节水率达30%以上，将为现代农业节水增效提供有力支持。
+                        </p>
+                        <a href="#" class="inline-flex items-center text-primary font-medium group-hover:underline">
+                            阅读全文
+                            <i class="fa fa-long-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="news.html"
+                    class="inline-block bg-white border border-primary text-primary hover:bg-primary hover:text-white transition-colors px-8 py-3 rounded-full font-medium shadow-md hover:shadow-lg">
+                    查看更多新闻
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 媒体看青园模块 -->
+    <section id="media" class="py-20 bg-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 模块标题 -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">媒体聚焦</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark mb-4">媒体看青园</h2>
+                <p class="text-neutral">
+                    关注各大媒体对青园集团的报道，了解我们在农业现代化进程中的实践与贡献
+                </p>
+            </div>
+
+            <!-- 合作媒体展示 - 移至报道上方 -->
+            <div class="mb-20 pb-16 border-b border-gray-100">
+                <h3 class="text-center text-xl font-bold mb-12">合作媒体</h3>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 lg:gap-24">
+                    <div
+                        class="grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 px-4 py-2">
+                        <img src="https://s1.aigei.com/prevfiles/231307e074c149cb9dd2379ac255bf21.png?e=2051020800&token=P7S2Xpzfz11vAkASLTkfHN7Fw-oOZBecqeJaxypL:MJBRSuiF9mV2ItUiE1Jksotf-4o="
+                            alt="央视新闻" class="h-8 sm:h-10 object-contain">
+                    </div>
+                    <div
+                        class="grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 px-4 py-2">
+                        <img src="https://s1.chu0.com/prevfiles/5215bc7b55eb498dbf9b061804f0beb1.png?e=2051020800&token=1srnZGLKZ0Aqlz6dk7yF4SkiYf4eP-YrEOdM1sob:QP7gzcjEv4NeuXl1wG5D_xiPvt8="
+                            alt="安徽日报" class="h-8 sm:h-10 object-contain">
+                    </div>
+                    <div
+                        class="grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 px-4 py-2">
+                        <img src="https://s1.chu0.com/src/img/png/ff/ff4a4a79372748bdbb9284a8e40fbfb5.png?watermark/3/image/aHR0cHM6Ly9zMS5jaHUwLmNvbS93YXRlcm1hcmsvcGljLTYwXzE1MC1HNS5wbmc_ZT0yMDUxMDIwODAwJnRva2VuPTFzcm5aR0xLWjBBcWx6NmRrN3lGNFNraVlmNGVQLVlyRU9kTTFzb2I6QTIzZ1hNOE4xTUJpa285T1ROcFhEUEtaWWFZPQ==/dissolve/100/gravity/Center/dx/4/dy/-5&e=2051020800&token=1srnZGLKZ0Aqlz6dk7yF4SkiYf4eP-YrEOdM1sob:0OdPaC0WLU_qpjwLkpImTreA2lo="
+                            alt="农机周刊" class="h-8 sm:h-10 object-contain">
+                    </div>
+                    <div
+                        class="grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 px-4 py-2">
+                        <img src="../img/icon/ahqy.jpg" alt="中国农机网" class="h-8 sm:h-10 object-contain">
+                    </div>
+                    <div
+                        class="grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100 px-4 py-2">
+                        <img src="https://ts1.tc.mm.bing.net/th/id/OIP-C.22OyM1IQsk_jgrpeTI9fXwHaJk?rs=1&pid=ImgDetMain&o=7&rm=3"
+                            alt="安徽电视台" class="h-8 sm:h-10 object-contain">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 媒体报道列表 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- 报道1 -->
+                <div
+                    class="bg-gray-50 rounded-xl overflow-hidden shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://picsum.photos/id/119/600/400" alt="央视报道青园集团"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span
+                                class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">央视新闻</span>
+                            <span class="text-sm text-gray-500">
+                                <i class="fa fa-calendar-o mr-1"></i>
+                                2023-10-15</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                            央视聚焦：青园集团引领农业机械化新革命</h3>
+                        <p class="text-neutral mb-4 line-clamp-3">
+                            央视《农业新闻》栏目对安徽青园集团进行了专题报道，聚焦集团在推动农业机械化、智能化方面的创新举措和显著成果...
+                        </p>
+                        <a href="media.html" class="inline-flex items-center text-primary font-medium hover:underline">
+                            查看详情
+                            <i class="fa fa-angle-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 报道2 -->
+                <div
+                    class="bg-gray-50 rounded-xl overflow-hidden shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://picsum.photos/id/129/600/400" alt="农机周刊报道"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span
+                                class="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs rounded-full">农机周刊</span>
+                            <span class="text-sm text-gray-500">
+                                <i class="fa fa-calendar-o mr-1"></i>
+                                2023-09-28</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                            青园模式：打造农机服务生态圈的创新实践</h3>
+                        <p class="text-neutral mb-4 line-clamp-3">
+                            《农机周刊》深入报道了青园集团独创的"三位一体"服务模式，分析了该模式如何有效解决农户购机难、用机难、维修难等问题...
+                        </p>
+                        <a href="media.html" class="inline-flex items-center text-primary font-medium hover:underline">
+                            查看详情
+                            <i class="fa fa-angle-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 报道3 -->
+                <div
+                    class="bg-gray-50 rounded-xl overflow-hidden shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://picsum.photos/id/139/600/400" alt="安徽日报报道"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span
+                                class="inline-block px-3 py-1 bg-red-100 text-red-800 text-xs rounded-full">安徽日报</span>
+                            <span class="text-sm text-gray-500">
+                                <i class="fa fa-calendar-o mr-1"></i>
+                                2023-08-12</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">青园集团：助力乡村振兴
+                            谱写农业现代化新篇章</h3>
+                        <p class="text-neutral mb-4 line-clamp-3">
+                            安徽日报记者走访青园集团多地服务网点，实地报道了集团在促进农业增效、农民增收方面做出的积极贡献和典型案例...
+                        </p>
+                        <a href="media.html" class="inline-flex items-center text-primary font-medium hover:underline">
+                            查看详情
+                            <i class="fa fa-angle-right ml-2 transition-transform group-hover:translate-x-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 查看更多按钮 -->
+            <div class="text-center">
+                <a href="media.html"
+                    class="inline-block bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium px-8 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow">
+                    查看全部报道
+                    <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 人才招聘模块 -->
+    <section id="jobs" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 模块标题 -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">加入我们</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark mb-4">人才招聘</h2>
+                <p class="text-neutral">
+                    青园集团正处于快速发展期，我们期待优秀人才的加入，与企业共同成长，共创美好未来
+                </p>
+            </div>
+
+            <!-- 企业优势 -->
+            <div class="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-4">
+                        <i class="fa fa-line-chart text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">发展空间</h3>
+                    <p class="text-neutral">完善的晋升通道和职业发展规划</p>
+                </div>
+                <div class="text-center p-6">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-4">
+                        <i class="fa fa-money text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">薪资福利</h3>
+                    <p class="text-neutral">具有竞争力的薪酬和完善福利体系</p>
+                </div>
+                <div class="text-center p-6">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-4">
+                        <i class="fa fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">培训体系</h3>
+                    <p class="text-neutral">系统化的岗前培训和在职技能提升</p>
+                </div>
+                <div class="text-center p-6">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-4">
+                        <i class="fa fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">团队文化</h3>
+                    <p class="text-neutral">积极向上、团结协作的工作氛围</p>
+                </div>
+            </div>
+            <!-- 招聘岗位列表 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 岗位1 -->
+                <div
+                    class="bg-white rounded-xl p-6 shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-dark">农业技术顾问</h3>
+                        <span class="px-3 py-1 bg-green-100 text-green-800 text-xs rounded-full">急聘</span>
+                    </div>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="flex items-center text-sm text-neutral">
+                            <i class="fa fa-map-marker text-primary mr-2"></i>
+                            合肥</span>
+                        <span class="flex items-center text-sm text-neutral">
+                            <i class="fa fa-money text-primary mr-2"></i>
+                            8k-15k</span>
+                        <span class="flex items-center text-sm text-neutral">
+                            <i class="fa fa-graduation-cap text-primary mr-2"></i>
+                            本科</span>
+                        <span class="flex items-center text-sm text-neutral">
+                            <i class="fa fa-clock-o text-primary mr-2"></i>
+                            3年以上</span>
+                    </div>
+                    <p class="text-neutral mb-6 line-clamp-3">
+                        负责为客户提供专业的农业技术支持，解答技术问题，组织技术培训，推动农业技术的应用与推广。
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">
+                            <i class="fa fa-calendar-o mr-1"></i>
+                            发布于 2023-10-20</span>
+                        <a href="jobs.html" class="text-primary font-medium hover:underline flex items-center">
+                            查看详情
+                            <i class="fa fa-angle-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 岗位2 -->
+                <div
+                    class="bg-white rounded-xl p-6 shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-dark">市场营销专员</h3>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">校招</span>
+                    </div>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="flex items-center text-sm text-neutral">
+                            <i class="fa fa-map-marker text-primary mr-2"></i>
+                            芜湖</span>
+                        <span class="flex items-center text-sm text-neutral">
+                            <i class="fa fa-money text-primary mr-2"></i>
+                            6k-12k</span>
+                        <span class="flex items-center text-sm text-neutral">
+                            <i class="fa fa-graduation-cap text-primary mr-2"></i>
+                            本科</span>
+                        <span class="flex items-center text-sm text-neutral">
+                            <i class="fa fa-clock-o text-primary mr-2"></i>
+                            不限</span>
+                    </div>
+                    <p class="text-neutral mb-6 line-clamp-3">
+                        负责公司产品的市场推广与销售工作，制定营销计划，开拓客户资源，维护客户关系，完成销售目标。
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">
+                            <i class="fa fa-calendar-o mr-1"></i>
+                            发布于 2023-10-15</span>
+                        <a href="jobs.html" class="text-primary font-medium hover:underline flex items-center">
+                            查看详情
+                            <i class="fa fa-angle-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 岗位3 -->
+                <div
+                    class="bg-white rounded-xl p-6 shadow-custom hover:shadow-hover transition-all duration-300 transform hover:-translate-y-1">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-dark">机械维修工程师</h3>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">社招</span>
+                    </div>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="flex items-center text-sm text-neutral">
+                            <i class="fa fa-map-marker text-primary mr-2"></i>
+                            阜阳</span>
+                        <span class="flex items-center text-sm text-neutral">
+                            <i class="fa fa-money text-primary mr-2"></i>
+                            7k-14k</span>
+                        <span class="flex items-center text-sm text-neutral">
+                            <i class="fa fa-graduation-cap text-primary mr-2"></i>
+                            大专</span>
+                        <span class="flex items-center text-sm text-neutral">
+                            <i class="fa fa-clock-o text-primary mr-2"></i>
+                            2年以上</span>
+                    </div>
+                    <p class="text-neutral mb-6 line-clamp-3">
+                        负责农业机械的安装、调试、维修与保养工作，为客户提供技术支持，培训客户正确使用设备。
+                    </p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500">
+                            <i class="fa fa-calendar-o mr-1"></i>
+                            发布于 2023-10-10</span>
+                        <a href="jobs.html" class="text-primary font-medium hover:underline flex items-center">
+                            查看详情
+                            <i class="fa fa-angle-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 查看更多按钮 -->
+            <div class="mt-12 text-center">
+                <a href="jobs.html"
+                    class="inline-block bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium px-8 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow">
+                    查看全部职位
+                    <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 招商引资核心模块 -->
+    <section id="investment" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <!-- 标题 -->
+            <div class="text-center mb-12">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">招商合作</span>
+                <h2 class="text-[clamp(1.5rem,3vw,2.2rem)] font-bold text-dark mb-4">携手青园，共创农业产业新未来</h2>
+                <p class="text-neutral max-w-2xl mx-auto">我们提供全方位支持，为合作伙伴创造最佳营商环境，共享发展红利</p>
+            </div>
+
+            <!-- 核心优势 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <a href="investment.html#location"
+                    class="bg-white p-6 rounded-xl shadow hover:shadow-lg hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4 text-primary">
+                        <i class="fa fa-map-marker text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">优越地理位置</h3>
+                    <p class="text-neutral text-sm">位于农业核心区，交通便利，年客流量超10万人次</p>
+                </a>
+
+                <a href="investment.html#customers"
+                    class="bg-white p-6 rounded-xl shadow hover:shadow-lg hover:-translate-y-1 transition-all">
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4 text-primary">
+                        <i class="fa fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">庞大客户群体</h3>
+                    <p class="text-neutral text-sm">依托集团资源，稳定客户群体为商户带来持续客流</p>
+                </a>
+
+                <a href="investment.html#policy"
+                    class="bg-white p-6 rounded-xl shadow hover:shadow-lg hover:-translate-y-1 transition-all relative">
+                    <span
+                        class="absolute top-3 right-3 bg-secondary text-white text-xs px-2 py-1 rounded-full">限时优惠</span>
+                    <div class="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4 text-primary">
+                        <i class="fa fa-handshake-o text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">专项扶持政策</h3>
+                    <p class="text-neutral text-sm">租金减免、装修补贴等多重优惠，降低经营成本</p>
+                </a>
+            </div>
+
+            <!-- 数据概览 -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <div class="bg-white p-4 rounded-lg text-center">
+                    <div class="text-primary text-2xl font-bold">300+</div>
+                    <div class="text-neutral text-sm">已入驻商户</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg text-center">
+                    <div class="text-primary text-2xl font-bold">30亿+</div>
+                    <div class="text-neutral text-sm">年交易额</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg text-center">
+                    <div class="text-primary text-2xl font-bold">10万+</div>
+                    <div class="text-neutral text-sm">年客流量</div>
+                </div>
+                <div class="bg-white p-4 rounded-lg text-center">
+                    <div class="text-primary text-2xl font-bold">92%</div>
+                    <div class="text-neutral text-sm">商户续约率</div>
+                </div>
+            </div>
+
+            <!-- 行动按钮 -->
+            <div class="text-center">
+                <a href="investment.html"
+                    class="inline-block bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition-all mr-3">
+                    了解详情
+                    <i class="fa fa-arrow-right ml-1"></i>
+                </a>
+                <a href="investment.html#contact"
+                    class="inline-block border border-primary text-primary px-6 py-2 rounded-full hover:bg-primary/5 transition-all">
+                    立即咨询
+                    <i class="fa fa-phone ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们版块 -->
+    <section id="detail" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 标题区域 -->
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4 animate-fade-in">关于我们</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark mb-4">安徽青园集团</h2>
+                <p class="text-neutral">30年专注农机服务，助力农业现代化发展，成为南方稻作区全程机械化技术领军服务商</p>
+            </div>
+
+            <!-- 核心信息区 - 图片比例调小为5:6（更小巧） -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+                <!-- 左侧图片区域 - 比例调小且完全显示 -->
+                <div class="relative group max-w-md mx-auto lg:mx-0">
+                    <div class="aspect-[5/6] overflow-hidden rounded-xl shadow-custom">
+                        <img src="../img/icon/ahqy.jpg" alt="青园集团农机展示中心"
+                            class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                </div>
+
+                <!-- 右侧简介 - 与图片区域视觉平衡 -->
+                <div class="space-y-8">
+                    <p class="text-neutral leading-relaxed text-lg">
+                        安徽青园集团由叶青先生创立，历经30年发展，已成为集农业工程技术服务、农机交易平台及专业市场运营为一体的综合性集团，在湖北黄冈、江西新余、安徽安庆等地拥有四个农机专业交易大市场。
+                    </p>
+
+                    <!-- 核心数据 -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div
+                            class="bg-gray-50 rounded-lg p-5 text-center transform transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                            <div class="text-3xl font-bold text-primary mb-2">4</div>
+                            <div class="text-sm text-neutral">专业市场</div>
+                        </div>
+                        <div
+                            class="bg-gray-50 rounded-lg p-5 text-center transform transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                            <div class="text-3xl font-bold text-primary mb-2">386</div>
+                            <div class="text-sm text-neutral">员工总数</div>
+                        </div>
+                        <div
+                            class="bg-gray-50 rounded-lg p-5 text-center transform transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                            <div class="text-3xl font-bold text-primary mb-2">50亿</div>
+                            <div class="text-sm text-neutral">年交易额</div>
+                        </div>
+                        <div
+                            class="bg-gray-50 rounded-lg p-5 text-center transform transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                            <div class="text-3xl font-bold text-primary mb-2">48</div>
+                            <div class="text-sm text-neutral">技术工程师</div>
+                        </div>
+                    </div>
+
+                    <!-- 服务特色 -->
+                    <div class="bg-primary/5 rounded-xl p-6 border border-primary/20">
+                        <h4 class="text-lg font-bold text-primary mb-5 flex items-center">
+                            <i class="fa fa-star text-secondary mr-3"></i>
+                            1243服务承诺
+                        </h4>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                            <div class="p-2">
+                                <div
+                                    class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-primary mx-auto mb-2">
+                                    <span class="font-bold">10分钟</span>
+                                </div>
+                                <span class="text-sm">响应</span>
+                            </div>
+                            <div class="p-2">
+                                <div
+                                    class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-primary mx-auto mb-2">
+                                    <span class="font-bold">2小时</span>
+                                </div>
+                                <span class="text-sm">到达</span>
+                            </div>
+                            <div class="p-2">
+                                <div
+                                    class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-primary mx-auto mb-2">
+                                    <span class="font-bold">4小时</span>
+                                </div>
+                                <span class="text-sm">解决</span>
+                            </div>
+                            <div class="p-2">
+                                <div
+                                    class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-primary mx-auto mb-2">
+                                    <span class="font-bold">3项</span>
+                                </div>
+                                <span class="text-sm">终身免费</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 企业理念 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div
+                    class="bg-gray-50 rounded-xl p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div
+                        class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-5">
+                        <i class="fa fa-heart text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark mb-3">核心价值观</h3>
+                    <p class="text-neutral">以客户为中心、以奋斗者为本</p>
+                </div>
+
+                <div
+                    class="bg-gray-50 rounded-xl p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div
+                        class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-5">
+                        <i class="fa fa-eye text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark mb-3">企业愿景</h3>
+                    <p class="text-neutral">百年企业、国际青园</p>
+                </div>
+
+                <div
+                    class="bg-gray-50 rounded-xl p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div
+                        class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-5">
+                        <i class="fa fa-bullseye text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark mb-3">企业使命</h3>
+                    <p class="text-neutral">让中国农民为自己而骄傲</p>
+                </div>
+
+                <div
+                    class="bg-gray-50 rounded-xl p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                    <div
+                        class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-5">
+                        <i class="fa fa-trophy text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-dark mb-3">企业荣誉</h3>
+                    <p class="text-neutral">中国农机流通十强企业</p>
+                </div>
+            </div>
+
+            <!-- 行动按钮 -->
+            <div class="text-center mt-12">
+                <a href="detail.html"
+                    class="inline-block bg-white border border-primary text-primary hover:bg-primary hover:text-white transition-colors px-8 py-3 rounded-full font-medium shadow-md hover:shadow-lg">
+                    了解更多
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载中心模块 -->
+    <section id="download" class="py-20 bg-light">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 模块标题 -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">资源中心</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark mb-4">下载中心</h2>
+                <p class="text-gray-600">
+                    提供产品手册、技术资料、软件工具等各类资源下载，助力您高效使用我们的产品与服务
+                </p>
+            </div>
+
+            <!-- 分类快捷入口 -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+                <a href="dowmload.html?category=manual"
+                    class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-3">
+                        <i class="fa fa-book text-xl"></i>
+                    </div>
+                    <span class="text-sm font-medium">产品手册</span>
+                </a>
+                <a href="dowmload.html?category=instruction"
+                    class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-3">
+                        <i class="fa fa-file-text-o text-xl"></i>
+                    </div>
+                    <span class="text-sm font-medium">操作指南</span>
+                </a>
+                <a href="dowmload.html?category=brochure"
+                    class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-3">
+                        <i class="fa fa-image text-xl"></i>
+                    </div>
+                    <span class="text-sm font-medium">宣传册</span>
+                </a>
+                <a href="dowmload.html?category=technical"
+                    class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-3">
+                        <i class="fa fa-cogs text-xl"></i>
+                    </div>
+                    <span class="text-sm font-medium">技术资料</span>
+                </a>
+                <a href="dowmload.html?category=software"
+                    class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-3">
+                        <i class="fa fa-desktop text-xl"></i>
+                    </div>
+                    <span class="text-sm font-medium">软件工具</span>
+                </a>
+                <a href="dowmload.html?category=recruitment"
+                    class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow">
+                    <div
+                        class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-3">
+                        <i class="fa fa-file-word-o text-xl"></i>
+                    </div>
+                    <span class="text-sm font-medium">招聘相关</span>
+                </a>
+            </div>
+
+            <!-- 热门下载资源 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 热门资源1 -->
+                <div class="download-item bg-white rounded-lg shadow-sm overflow-hidden card-hover"
+                    data-category="manual">
+                    <div class="p-6">
+                        <div class="flex items-start mb-4">
+                            <div
+                                class="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                <i class="fa fa-book text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">招聘简历模板</h3>
+                                <p class="text-gray-500 text-sm">招聘相关· 2025-10-1</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">
+                            安徽青园集团标准简历模板，包含个人信息、教育背景、工作经历等模块，适合应聘本公司各类岗位使用。</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-500 text-sm"><i class="fa fa-file-word-o mr-1"></i> 12 KB</span>
+                            <!-- 修改href属性为实际文件路径 -->
+                            <a href="../resource/招聘简历模板.docx" class="btn-primary" download>
+                                <i class="fa fa-download mr-2"></i> 下载
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 热门资源2 -->
+                <div class="download-item bg-white rounded-lg shadow-sm overflow-hidden card-hover"
+                    data-category="software">
+                    <div class="p-6">
+                        <div class="flex items-start mb-4">
+                            <div
+                                class="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                <i class="fa fa-desktop text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">青园集团宣传手册</h3>
+                                <p class="text-gray-500 text-sm">宣传册 · 2025-09-30</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">安徽青园集团宣传手册含集团概况、荣誉、业务等。</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-500 text-sm"><i class="fa fa-file-zip-o mr-1"></i> 22.8 MB</span>
+                            <a href="../resource/青园集团企业宣传手册.pdf" class="btn-primary" download>
+                                <i class="fa fa-download mr-2"></i> 下载
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 热门资源3 -->
+                <!-- <div class="download-item bg-white rounded-lg shadow-sm overflow-hidden card-hover"
+                    data-category="brochure">
+                    <div class="p-6">
+                        <div class="flex items-start mb-4">
+                            <div
+                                class="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center text-primary mr-4">
+                                <i class="fa fa-image text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-1">2023年农机产品目录</h3>
+                                <p class="text-gray-500 text-sm">宣传册 · 2023-08-10</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-2">包含公司全系列农机产品参数、配置说明及应用场景展示，助力选购决策。</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-500 text-sm"><i class="fa fa-file-pdf-o mr-1"></i> 12.5 MB</span>
+                            <a href="dowmload.html" class="btn-primary">
+                                <i class="fa fa-download mr-2"></i> 下载
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- 查看更多按钮 -->
+            <div class="mt-12 text-center">
+                <a href="dowmload.html"
+                    class="inline-block bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-medium px-8 py-3 rounded-full transition-all duration-300 shadow-sm hover:shadow">
+                    查看全部资源
+                    <i class="fa fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 模块标题 -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">联系我们</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark mb-4">
+                    随时为您提供帮助
+                </h2>
+                <p class="text-neutral">
+                    无论您有任何疑问或需求，我们的团队都将竭诚为您服务，期待您的咨询
+                </p>
+            </div>
+
+            <!-- 联系信息主体区域 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+                <!-- 联系卡片 -->
+                <div
+                    class="lg:col-span-2 bg-light rounded-xl p-8 shadow-custom hover:shadow-hover transition-all duration-300">
+                    <h3 class="text-2xl font-bold mb-6 text-dark">联系方式</h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                <i class="fa fa-map-marker text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">公司地址</h4>
+                                <p class="text-neutral">安徽省安庆市宜秀区青园农机机电城</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                <i class="fa fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">联系电话</h4>
+                                <p class="text-neutral">0550-5318888</p>
+                                <p class="text-neutral">13800138000</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                <i class="fa fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">电子邮箱</h4>
+                                <p class="text-neutral">info@qingyuangroup.com</p>
+                                <p class="text-neutral">service@qingyuangroup.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                <i class="fa fa-clock-o text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">营业时间</h4>
+                                <p class="text-neutral">周一至周五: 8:00 - 18:00</p>
+                                <p class="text-neutral">周六至周日: 9:00 - 16:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 社交媒体 -->
+                    <div class="mt-8 flex space-x-4">
+                        <div class="relative" id="wechat-container">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors cursor-pointer"
+                                id="wechat-icon">
+                                <i class="fa fa-weixin"></i>
+                            </a>
+                            <div
+                                class="qrcode-tooltip absolute bottom-full left-0 transform -translate-x-[10px] mb-4 bg-white p-4 rounded-xl shadow-lg z-20">
+                                <div class="text-center">
+                                    <img src="../img/qrcode/qh-school.jpg" alt="安徽青园集团微信公众号二维码"
+                                        class="w-full h-auto rounded-lg shadow-sm">
+                                    <p class="text-xs text-gray-600 mt-2 font-medium">扫码关注微信公众号</p>
+                                </div>
+                                <div
+                                    class="absolute bottom-[-8px] left-[20px] transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-white">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors">
+                            <i class="fa fa-qq"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors">
+                            <svg t="1753082413186" class="icon" viewbox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="5374" width="200" height="200">
+                                <path
+                                    d="M899.8 594.1c-15.4 31.9-31.8 40.6-65.7 35.3-21.8-3.4-33.7-16.2-37-41.7 13.2 0 26.2-0.3 39.1 0.1 8.7 0.3 12.7-2.6 12.3-11.8-0.5-13.2 0.1-26.6-0.3-39.8-0.4-11.1-6.4-18.3-17.7-18.5-22.7-0.5-45.4-0.2-70.3-0.2V630h-50.6V518.3h-51v-52h49.6v-44.1h-32.9v-50.8c10.8-0.5 21.2-1.1 33.5-1.6v-17.6h51c-2 14.2 3.6 18.8 18.3 19 39.2 0.6 59.8 22.7 60.5 62 0.2 10.8 0.1 21.6 0.1 33.5 31.6-1.5 51.1 11.6 61.3 38.4v89h-0.2zM759.9 419.8c0 15.5-0.6 27.1 0.4 38.5 0.3 2.9 5.7 7.6 8.8 7.6 6.2 0.1 17.5-2 17.7-4.2 1.3-11.8 1.8-24.5-1.7-35.6-1.2-3.8-14.5-3.9-25.2-6.3z m-494-67.7c-0.1 77.4-0.1 154.8-0.5 232.1-0.2 33.1-20.9 50.8-52.2 45.6-20.5-3.4-31.5-17.2-32.3-41.6h34v-236c17.1-0.1 34.1-0.1 51-0.1z m216.6 0C470 377 456.1 401.3 447.2 425c20.8-1.2 39.4-2.3 61.7-3.6-11.8 23.7-22.2 44.8-32.7 65.8-1.4 2.8-2.8 5.8-4.2 8.6-11 22-10.9 22 13.4 22.7 2.5 0.1 5 0.4 9.7 0.8-6.8 13.4-12.8 25.6-19.3 37.6-1.1 2-4 4.2-6 4.2-18-0.1-36.1 0.6-54-1.4-12.9-1.5-17.9-11.2-12.8-23.6 6.2-15.2 13.4-29.9 20.2-44.9 2.3-5.1 4.6-10.3 8.1-17.9-10 0-17.2 0.2-24.5-0.1-21.5-0.7-28.6-10.3-19.8-29.8 14-30.9 29.6-61 44.4-91.5l51.1 0.2zM109.9 546.3c3.2-17.9 7.3-35.7 9.4-53.6 2.7-22.6 3.8-45.4 5.7-69.1h53.6c-9.1 61.3 1.8 126.2-38.4 182.6-10.7-18.9-20.6-36.2-30.4-53.6 0.1-2 0.1-4.1 0.1-6.3zM899.8 403c-11.5 19.9-29.6 20.5-49 17.4-5.8-25.3-1.6-41.9 11.9-48.1 12.6-5.8 24.1-1.2 37.2 14.8l-0.1 15.9z"
+                                    p-id="5375" fill="#ffffff"></path>
+                                <path
+                                    d="M604.9 579.7c14 0 27.1 0.3 40.2-0.1 8.2-0.2 10.8 3.2 11.3 11.2 2.5 40.2 2.8 40.2-37.9 40.2H474.7c8.9-17.6 16.2-33.1 24.7-47.8 1.6-2.8 8.5-3.3 12.9-3.4 12.7-0.5 25.4-0.2 39.3-0.2V422.1h-32.5v-50H637v49.2h-32.2c0.1 53.2 0.1 104.7 0.1 158.4zM302.1 423.1h50.2c2.4 31 1.4 62.3 8.1 91.8 7.9 34.5-4.7 61.3-21 88.5-24.4-21.4-37.7-85.3-37.3-180.3zM392.6 579H474c-9.1 17.8-16.3 32.3-24.1 46.5-1.5 2.6-5.8 5.1-8.8 5.1-23.7 0.4-47.5 0.2-74.7 0.2 10.3-20.4 18.8-37.1 26.2-51.8z"
+                                    p-id="5376" fill="#ffffff"></path>
+                            </svg>
+                        </a>
+
+                        <a target="_blank"
+                            href="https://www.douyin.com/user/MS4wLjABAAAAQ1njIFuE-nyc9zxHpEpEKvx2qN67GaFjW6ZcY1Xo2E8?from_tab_name=main"
+                            class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors">
+
+                            <svg t="1753083581352" class="icon" viewbox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="10540" width="200" height="200">
+                                <path
+                                    d="M523.377778 312.888889v273.066667c0 31.288889-25.6 56.888889-56.888889 56.888888s-56.888889-25.6-56.888889-56.888888 25.6-56.888889 56.888889-56.888889c5.688889 0 11.377778 0 17.066667 2.844444v-68.266667h-17.066667c-68.266667 0-125.155556 56.888889-125.155556 125.155556 0 68.266667 56.888889 125.155556 125.155556 125.155556 68.266667 0 125.155556-56.888889 125.155555-125.155556v-139.377778c28.444444 19.911111 59.733333 31.288889 93.866667 31.288889v-68.266667c-51.2 0-93.866667-42.666667-93.866667-93.866666h-68.266666z"
+                                    fill="#ffffff" p-id="10541"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 微信二维码 -->
+                <div
+                    class="bg-light rounded-xl p-8 shadow-custom text-center hover:shadow-hover flex flex-col justify-center">
+                    <h4 class="font-bold text-gray-800 mb-6 text-xl">扫码关注微信公众号</h4>
+                    <div class="bg-white p-4 inline-block rounded-lg mx-auto mb-6">
+                        <img src="../img/qrcode/qh-school.jpg" alt="微信公众号二维码" class="w-56 h-56 object-cover">
+                    </div>
+                    <p class="text-neutral text-sm flex-grow flex items-center justify-center">
+                        获取最新农机资讯和优惠信息
+                    </p>
+                </div>
+            </div>
+
+            <!-- 独立地图模块（从图片中移出） -->
+            <!-- 独立地图模块（含真实位置） -->
+            <div class="bg-light rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+                <!-- 地图标题栏 -->
+                <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center">
+                    <h3 class="text-xl font-bold text-dark">公司位置</h3>
+                    <a href="https://j.map.baidu.com/xxxxxx" target="_blank"
+                        class="text-primary hover:text-primary/80 text-sm font-medium flex items-center">
+                        查看全屏地图 <i class="fa fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 地图容器（嵌入百度地图API） -->
+                <div class="flex flex-col md:flex-row">
+                    <!-- 左侧地图显示区域 -->
+                    <div class="w-full md:w-3/4 h-[300px] md:h-[400px] relative">
+                        <!-- 百度地图容器 -->
+                        <div id="baidu-map" class="w-full h-full"></div>
+                    </div>
+
+                    <!-- 右侧位置信息 -->
+                    <div class="w-full md:w-1/4 p-6 bg-white border-t md:border-t-0 md:border-l border-gray-100">
+                        <h4 class="font-bold text-primary text-lg mb-4">安徽青园集团(中国农机城)</h4>
+                        <div class="space-y-4 text-neutral">
+                            <p class="flex items-start">
+                                <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                                <span>安徽省安庆市宜秀区青园国际农机机电城</span>
+                            </p>
+                            <p class="flex items-start">
+                                <i class="fa fa-car text-primary mt-1 mr-3"></i>
+                                <span>距安庆站约3公里，驾车10分钟可达</span>
+                            </p>
+                            <!-- <p class="flex items-start">
+                    <i class="fa fa-bus text-primary mt-1 mr-3"></i>
+                    <span>公交：全椒101路至青园国际农机机电城站下车即到</span>
+                </p> -->
+                        </div>
+
+                        <a href="https://j.map.baidu.com/64/cBp" target="_blank"
+                            class="mt-6 inline-block bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                            导航前往 <i class="fa fa-location-arrow ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                            <img src="../img/icon/ahqy.jpg" alt="安徽青园集团"
+                                class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <span class="text-xl font-display font-bold text-white">安徽青园集团</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        青园集团愿与全国相关企业联盟发展，竭诚合作，用八方资源，打造"机械强农"商业典范。
+                    </p>
+                    <div class="flex space-x-4">
+                        <!-- 页脚微信图标添加二维码功能 -->
+                        <div class="relative" id="footer-wechat-container">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                                id="footer-wechat-icon">
+                                <i class="fa fa-weixin"></i>
+                            </a>
+                            <!-- 页脚微信二维码 -->
+                            <div
+                                class="qrcode-tooltip absolute bottom-full left-0 transform -translate-x-[10px] mb-4 bg-white p-4 rounded-xl shadow-lg z-20">
+                                <div class="text-center">
+                                    <img src="../img/qrcode/qh-school.jpg" alt="安徽青园集团微信公众号二维码"
+                                        class="w-full h-auto rounded-lg shadow-sm">
+                                    <p class="text-xs text-gray-600 mt-2 font-medium">扫码关注微信公众号</p>
+                                </div>
+                                <!-- 调整箭头位置，使其指向微信图标 -->
+                                <div
+                                    class="absolute bottom-[-8px] left-[20px] transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-white">
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            id="footer-wechat-icon">
+                            <i class="fa fa-qq text-lg"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            id="footer-wechat-icon">
+                            <i class="fa fa-weibo text-lg"></i>
+                        </a>
+
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            id="footer-wechat-icon">
+                            <svg t="1753082413186" class="icon" viewbox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="5374" width="200" height="200">
+                                <path
+                                    d="M899.8 594.1c-15.4 31.9-31.8 40.6-65.7 35.3-21.8-3.4-33.7-16.2-37-41.7 13.2 0 26.2-0.3 39.1 0.1 8.7 0.3 12.7-2.6 12.3-11.8-0.5-13.2 0.1-26.6-0.3-39.8-0.4-11.1-6.4-18.3-17.7-18.5-22.7-0.5-45.4-0.2-70.3-0.2V630h-50.6V518.3h-51v-52h49.6v-44.1h-32.9v-50.8c10.8-0.5 21.2-1.1 33.5-1.6v-17.6h51c-2 14.2 3.6 18.8 18.3 19 39.2 0.6 59.8 22.7 60.5 62 0.2 10.8 0.1 21.6 0.1 33.5 31.6-1.5 51.1 11.6 61.3 38.4v89h-0.2zM759.9 419.8c0 15.5-0.6 27.1 0.4 38.5 0.3 2.9 5.7 7.6 8.8 7.6 6.2 0.1 17.5-2 17.7-4.2 1.3-11.8 1.8-24.5-1.7-35.6-1.2-3.8-14.5-3.9-25.2-6.3z m-494-67.7c-0.1 77.4-0.1 154.8-0.5 232.1-0.2 33.1-20.9 50.8-52.2 45.6-20.5-3.4-31.5-17.2-32.3-41.6h34v-236c17.1-0.1 34.1-0.1 51-0.1z m216.6 0C470 377 456.1 401.3 447.2 425c20.8-1.2 39.4-2.3 61.7-3.6-11.8 23.7-22.2 44.8-32.7 65.8-1.4 2.8-2.8 5.8-4.2 8.6-11 22-10.9 22 13.4 22.7 2.5 0.1 5 0.4 9.7 0.8-6.8 13.4-12.8 25.6-19.3 37.6-1.1 2-4 4.2-6 4.2-18-0.1-36.1 0.6-54-1.4-12.9-1.5-17.9-11.2-12.8-23.6 6.2-15.2 13.4-29.9 20.2-44.9 2.3-5.1 4.6-10.3 8.1-17.9-10 0-17.2 0.2-24.5-0.1-21.5-0.7-28.6-10.3-19.8-29.8 14-30.9 29.6-61 44.4-91.5l51.1 0.2zM109.9 546.3c3.2-17.9 7.3-35.7 9.4-53.6 2.7-22.6 3.8-45.4 5.7-69.1h53.6c-9.1 61.3 1.8 126.2-38.4 182.6-10.7-18.9-20.6-36.2-30.4-53.6 0.1-2 0.1-4.1 0.1-6.3zM899.8 403c-11.5 19.9-29.6 20.5-49 17.4-5.8-25.3-1.6-41.9 11.9-48.1 12.6-5.8 24.1-1.2 37.2 14.8l-0.1 15.9z"
+                                    p-id="5375" fill="#ffffff"></path>
+                                <path
+                                    d="M604.9 579.7c14 0 27.1 0.3 40.2-0.1 8.2-0.2 10.8 3.2 11.3 11.2 2.5 40.2 2.8 40.2-37.9 40.2H474.7c8.9-17.6 16.2-33.1 24.7-47.8 1.6-2.8 8.5-3.3 12.9-3.4 12.7-0.5 25.4-0.2 39.3-0.2V422.1h-32.5v-50H637v49.2h-32.2c0.1 53.2 0.1 104.7 0.1 158.4zM302.1 423.1h50.2c2.4 31 1.4 62.3 8.1 91.8 7.9 34.5-4.7 61.3-21 88.5-24.4-21.4-37.7-85.3-37.3-180.3zM392.6 579H474c-9.1 17.8-16.3 32.3-24.1 46.5-1.5 2.6-5.8 5.1-8.8 5.1-23.7 0.4-47.5 0.2-74.7 0.2 10.3-20.4 18.8-37.1 26.2-51.8z"
+                                    p-id="5376" fill="#ffffff"></path>
+                            </svg>
+                        </a>
+
+                        <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            id="footer-wechat-icon"
+                            href="https://www.douyin.com/user/MS4wLjABAAAAQ1njIFuE-nyc9zxHpEpEKvx2qN67GaFjW6ZcY1Xo2E8?from_tab_name=main"
+                            target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                            <svg t="1753083581352" class="icon" viewbox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="10540" width="200" height="200">
+                                <path
+                                    d="M523.377778 312.888889v273.066667c0 31.288889-25.6 56.888889-56.888889 56.888888s-56.888889-25.6-56.888889-56.888888 25.6-56.888889 56.888889-56.888889c5.688889 0 11.377778 0 17.066667 2.844444v-68.266667h-17.066667c-68.266667 0-125.155556 56.888889-125.155556 125.155556 0 68.266667 56.888889 125.155556 125.155556 125.155556 68.266667 0 125.155556-56.888889 125.155555-125.155556v-139.377778c28.444444 19.911111 59.733333 31.288889 93.866667 31.288889v-68.266667c-51.2 0-93.866667-42.666667-93.866667-93.866666h-68.266666z"
+                                    fill="#ffffff" p-id="10541"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">联系方式</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">安徽省安庆市宜秀区青园农机城</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">0556-123456</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">info@ahqy.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">周一至周日 8:00-18:00</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <!-- 右移标题右移并处于两列之间 -->
+                    <h4 class="text-lg font-bold mb-6 pl-6 md:pl-0 md:absolute md:left-[50%] md:-translate-x-[3.5rem]">
+                        快速链接</h4>
+
+                    <!-- 双列布局的链接列表 -->
+                    <ul class="quick-links-container text-gray-400 pt-8">
+                        <li class="quick-links-item">
+                            <a href="index.html" class="text-gray-400 hover:text-white transition-colors">首页</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="market.html" class="text-gray-400 hover:text-white transition-colors">农机大市场</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="merchants.html" class="text-gray-400 hover:text-white transition-colors">商铺展示</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="products.html" class="text-gray-400 hover:text-white transition-colors">产品中心</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="testimonials.html"
+                                class="text-gray-400 hover:text-white transition-colors">客户评价</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="services.html" class="text-gray-400 hover:text-white transition-colors">服务优势</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="culture.html" class="text-gray-400 hover:text-white transition-colors">文化理念</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="creat-platform.html"
+                                class="text-gray-400 hover:text-white transition-colors">文化理念</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="news.html" class="text-gray-400 hover:text-white transition-colors">新闻动态</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="media.html" class="text-gray-400 hover:text-white transition-colors">媒体看青园</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="jobs.html" class="text-gray-400 hover:text-white transition-colors">人才招聘</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="investment.html" class="text-gray-400 hover:text-white transition-colors">招商中心</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="dowmload.html" class="text-gray-400 hover:text-white transition-colors">下载中心</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="detail.html" class="text-gray-400 hover:text-white transition-colors">关于我们</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="index.html#contact.html"
+                                class="text-gray-400 hover:text-white transition-colors">联系我们</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <style>
+                    /* 保持原有双列布局样式 */
+                    .quick-links-container {
+                        column-count: 2;
+                        column-gap: 4rem;
+                        /* 加大列间距，为标题留出空间 */
+                    }
+
+                    .quick-links-item {
+                        break-inside: avoid;
+                        margin-bottom: 0.8rem;
+                    }
+
+                    /* 响应式调整 */
+                    @media(max-width: 768px) {
+                        .quick-links-container {
+                            column-count: 1;
+                            column-gap: 0;
+                        }
+
+                        h4.md\:absolute {
+                            position: static;
+                            transform: none;
+                            left: 0;
+                            pl: 0;
+                        }
+                    }
+                </style>
+
+                <!-- 配套CSS样式 (已添加到原有样式表中) -->
+                <style>
+                    .quick-links-container {
+                        column-count: 2;
+                        column-gap: 1.5rem;
+                    }
+
+                    .quick-links-item {
+                        break-inside: avoid;
+                        /* 防止链接被分割到不同列 */
+                        margin-bottom: 0.8rem;
+                    }
+
+                    /* 响应式调整 - 移动端恢复单列 */
+                    @media(max-width: 768px) {
+                        .quick-links-container {
+                            column-count: 1;
+                        }
+                    }
+                </style>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6">微信公众号</h4>
+                    <div class="bg-white p-3 inline-block rounded-lg">
+                        <img src="../img/qrcode/qh-school.jpg" alt="微信公众号二维码" class="w-36 h-36">
+                    </div>
+                    <p class="text-xs text-gray-400 mt-2 font-medium">扫码关注获取更多资讯</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2025 安徽青园集团. 保留所有权利.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">隐私政策</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">使用条款</a>
+                    <a href="map.html" class="text-gray-400 hover:text-white text-sm transition-colors">网站地图</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transform translate-y-20 opacity-0 transition-all duration-300">
+        <i class="fa fa-angle-up text-xl"></i>
+    </button>
+
+    <!-- JavaScript -->
+
+    <!-- 导航栏滚动效果、移动端菜单切换、平滑滚动 -->
+    <script src="../common/js/header-show.js"></script>
+
+    <!-- 回到顶部按钮 -->
+    <script src="../common/js/backtop.js"></script>
+
+    <!--  引入表单二维码显示脚本 -->
+    <script src="../common/js/qrcode-show-body.js"></script>
+
+    <!-- 引入页脚二维码显示脚本 -->
+    <script src="../common/js/qrcode-show-footer.js"></script>
+
+    <!-- 百度地图API脚本（放在页面底部） -->
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=nSxiPohfziUaCuONe4ViUP2N"></script>
+
+    <!-- 百度地图显示及导航脚本 -->
+    <script src="../common/js/maps-directore.js"></script>
+
+</body>
+
+</html>

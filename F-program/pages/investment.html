@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安徽青园集团 - 招商引资</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2E7D32', // 深绿色主色调
+                        secondary: '#FF9800', // 橙色辅助色
+                        dark: '#1A202C', // 深色文本
+                        light: '#F8FAFC', // 浅色背景
+                        neutral: '#4A5568', // 中性色
+                    },
+                    fontFamily: {
+                        sans: [
+                            'Inter', 'system-ui', 'sans-serif'
+                        ],
+                        display: ['Montserrat', 'sans-serif']
+                    },
+                    boxShadow: {
+                        'custom': '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02)',
+                        'hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+                        .content-auto {
+                            content-visibility: auto;
+                        }
+                        .text-shadow {
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                        }
+                        .bg-blur {
+                            backdrop-filter: blur(8px);
+                        }
+                        .animate-float {
+                            animation: float 6s ease-in-out infinite;
+                        }
+                        @keyframes float {
+                            0% { transform: translateY(0px); }
+                            50% { transform: translateY(-20px); }
+                            100% { transform: translateY(0px); }
+                        }
+                        .card-hover {
+                            transition: all 0.3s ease;
+                        }
+                        .card-hover:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+                        }
+            
+                        .qrcode-tooltip {
+                            opacity: 0;
+                            visibility: hidden;
+                            transform: translateY(10px);
+                            transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+                            width: 200px;
+                        }
+                        .qrcode-tooltip.active {
+                            opacity: 1;
+                            visibility: visible;
+                            transform: translateY(0);
+                        }
+                        
+                        @keyframes fadeIn {
+                            from { opacity: 0; transform: translateY(10px); }
+                            to { opacity: 0.95; transform: translateY(0); }
+                        }
+                    }
+        </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="font-sans text-dark bg-light">
+    <!-- 导航栏 -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                        <img src="../img/icon/ahqy.jpg" alt="安徽青园集团标志" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <span class="text-xl font-display font-bold text-primary">安徽青园集团(中国农机城)</span>
+                </a>
+
+                <!-- 桌面导航 -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <nav class="hidden md:flex items-center space-x-8">
+                        <a href="index.html#home"
+                            class="text-dark hover:text-primary transition-colors font-medium">首页</a>
+                        <a href="index.html#market"
+                            class="text-dark hover:text-primary transition-colors font-medium">农机大市场</a>
+                        <a href="index.html#merchants"
+                            class="text-dark hover:text-primary transition-colors font-medium">商铺展示</a>
+                        <a href="index.html#products"
+                            class="text-dark hover:text-primary transition-colors font-medium">产品中心</a>
+                        <a href="index.html#hot"
+                            class="text-dark hover:text-primary transition-colors font-medium">热门产品</a>
+                        <a href="index.html#testimonials"
+                            class="text-dark hover:text-primary transition-colors font-medium">客户评价</a>
+                        <a href="index.html#services"
+                            class="text-dark hover:text-primary transition-colors font-medium">服务优势</a>
+                        <a href="index.html#culture"
+                            class="text-dark hover:text-primary transition-colors font-medium">文化理念</a>
+                        <a href="index.html#team"
+                            class="text-dark hover:text-priarym transition-colors font-medium">管理团队</a>
+                        <a href="index.html#dynamics"
+                            class="text-dark hover:text-primary transition-colors font-medium">项目投资动态</a>
+                        <a href="index.html#news"
+                            class="text-dark hover:text-primary transition-colors font-medium">新闻动态</a>
+                        <a href="index.html#media"
+                            class="text-dark hover:text-primary transition-colors font-medium">媒体看青园</a>
+                        <a href="index.html#jobs"
+                            class="text-dark hover:text-primary transition-colors font-medium">人才招聘</a>
+                        <a href="index.html#investment"
+                            class="text-dark hover:text-primary transition-colors font-medium">招商中心</a>
+                        <a href="index.html#download"
+                            class="text-dark hover:text-primary transition-colors font-medium">下载中心</a>
+                        <a href="index.html#detail"
+                            class="text-dark hover:text-primary transition-colors font-medium">关于我们</a>
+                        <a href="index.html#contact"
+                            class="text-dark hover:text-primary transition-colors font-medium">联系我们</a>
+                    </nav>
+                </nav>
+
+                <!-- 联系按钮 -->
+                <a href="index.html#contact"
+                    class="hidden md:block bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1">
+                    投资咨询
+                </a>
+
+                <!-- 移动端菜单按钮 -->
+                <button id="menu-toggle" class="md:hidden text-dark focus:outline-none">
+                    <i class="fa fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- 移动端导航菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 bg-blur border-t border-gray-100 shadow-lg">
+            <div class="container mx-auto px-4 py-3 space-y-3">
+                <a href="index.html#home" class="block py-2 text-dark hover:text-primary transition-colors">首页</a>
+                <a href="index.html#market" class="block py-2 text-dark hover:text-primary transition-colors">农机大市场</a>
+                <a href="index.html#merchants"
+                    class="block py-2 text-dark hover:text-primary transition-colors">商铺展示</a>
+                <a href="index.html#products" class="block py-2 text-dark hover:text-primary transition-colors">产品中心</a>
+                <a href="index.html#hot" class="block py-2 text-dark hover:text-primary transition-colors">热门产品</a>
+                <a href="index.html#testimonials"
+                    class="block py-2 text-dark hover:text-primary transition-colors">客户评价</a>
+                <a href="index.html#services" class="block py-2 text-dark hover:text-primary transition-colors">服务优势</a>
+                <a href="index.html#culture" class="block py-2 text-dark hover:text-primary transition-colors">文化理念</a>
+                <a href="index.html#team" class="block py-2 text-dark hover:text-primary transition-colors">管理团队</a>
+                <a href="index.html#dynamics"
+                    class="block py-2 text-dark hover:text-primary transition-colors">项目投资动态</a>
+                <a href="index.html#news" class="block py-2 text-dark hover:text-primary transition-colors">新闻动态</a>
+                <a href="index.html#media" class="block py-2 text-dark hover:text-primary transition-colors">媒体看青园</a>
+                <a href="index.html#jobs" class="block py-2 text-dark hover:text-primary transition-colors">人才招聘</a>
+                <a href="index.html#investment"
+                    class="block py-2 text-dark hover:text-primary transition-colors">招商中心</a>
+                <a href="index.html#download" class="block py-2 text-dark hover:text-primary transition-colors">下载中心</a>
+                <a href="index.html#detail" class="block py-2 text-dark hover:text-primary transition-colors">关于我们</a>
+                <a href="index.html#contact" class="block py-2 text-dark hover:text-primary transition-colors">联系我们</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 面包屑导航 -->
+    <div class="pt-24 pb-6 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center text-sm">
+                <a href="index.html" class="text-neutral hover:text-primary">首页</a>
+                <i class="fa fa-angle-right mx-2 text-gray-400"></i>
+                <span class="text-primary">招商引资</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 招商引资页面标题 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">合作共赢</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark">
+                    携手青园，共创农业新未来
+                </h2>
+                <p class="text-neutral max-w-2xl mx-auto mt-4">
+                    安徽青园集团诚邀各界有识之士共谋发展，共享农业现代化带来的巨大商机，实现互利共赢。
+                </p>
+            </div>
+
+            <!-- 投资优势 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-custom text-center card-hover">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-6">
+                        <i class="fa fa-map-marker text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">区位优势</h3>
+                    <p class="text-neutral">
+                        地处皖西南交通枢纽，辐射华东、华中地区，物流便捷，覆盖人口众多，市场潜力巨大。
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-custom text-center card-hover">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-6">
+                        <i class="fa fa-handshake-o text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">政策支持</h3>
+                    <p class="text-neutral">
+                        享受国家及地方多项农业扶持政策，提供税收减免、租金优惠、资金扶持等多项利好政策。
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-custom text-center card-hover">
+                    <div
+                        class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-6">
+                        <i class="fa fa-line-chart text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">发展前景</h3>
+                    <p class="text-neutral">
+                        农业现代化进程加速，农机市场需求持续增长，集团平台效应显著，投资回报稳定可观。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 招商项目筛选 -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="filter-btn px-5 py-2 rounded-full bg-primary text-white font-medium"
+                    data-category="all">全部项目</button>
+                <button
+                    class="filter-btn px-5 py-2 rounded-full bg-gray-100 hover:bg-primary/10 text-neutral hover:text-primary transition-colors font-medium"
+                    data-category="农机销售">农机销售</button>
+                <button
+                    class="filter-btn px-5 py-2 rounded-full bg-gray-100 hover:bg-primary/10 text-neutral hover:text-primary transition-colors font-medium"
+                    data-category="配套服务">配套服务</button>
+                <button
+                    class="filter-btn px-5 py-2 rounded-full bg-gray-100 hover:bg-primary/10 text-neutral hover:text-primary transition-colors font-medium"
+                    data-category="物流仓储">物流仓储</button>
+                <button
+                    class="filter-btn px-5 py-2 rounded-full bg-gray-100 hover:bg-primary/10 text-neutral hover:text-primary transition-colors font-medium"
+                    data-category="电商平台">电商平台</button>
+            </div>
+            <!-- 招商项目列表 -->
+            <div class="space-y-6">
+                <!-- 项目1 -->
+    <div class="project-card bg-white border border-gray-100 rounded-xl overflow-hidden shadow-custom card-hover" data-category="农机销售">
+                    <div class="md:flex">
+                        <div class="p-8 md:w-2/3">
+                            <div class="flex flex-wrap justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-dark">农机品牌区域代理</h3>
+                                <span
+                                    class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">农机销售</span>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-money mr-2 text-primary"></i>
+                                    <span>投资：10-50万</span>
+                                </div>
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-map-marker mr-2 text-primary"></i>
+                                    <span>区域：安徽全省</span>
+                                </div>
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-clock-o mr-2 text-primary"></i>
+                                    <span>合作期限：3-5年</span>
+                                </div>
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-percent mr-2 text-primary"></i>
+                                    <span>回报率：预计15-30%</span>
+                                </div>
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-shield mr-2 text-primary"></i>
+                                    <span>支持：品牌+培训+营销</span>
+                                </div>
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-calendar mr-2 text-primary"></i>
+                                    <span>启动时间：常年招商</span>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <h4 class="font-bold text-dark mb-2">项目介绍：</h4>
+                                <ul class="text-neutral space-y-1 ml-6 list-disc">
+                                    <li>成为国内外知名农机品牌在指定区域的独家代理商</li>
+                                    <li>享受品牌授权、市场保护、价格优惠等支持政策</li>
+                                    <li>青园集团提供全方位的营销支持和技术培训</li>
+                                    <li>共享集团客户资源和销售渠道</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">合作要求：</h4>
+                                <ul class="text-neutral space-y-1 ml-6 list-disc">
+                                    <li>具备一定的资金实力和良好的商业信誉</li>
+                                    <li>有农机销售经验或相关行业资源者优先</li>
+                                    <li>认同青园集团的经营理念和品牌战略</li>
+                                    <li>能够组建专业的销售和服务团队</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-8 md:w-1/3 flex flex-col justify-center">
+                            <button
+                                class="inquire-btn bg-primary hover:bg-primary/90 text-white py-3 rounded-lg transition-colors font-medium mb-4">
+                                咨询详情
+                            </button>
+                            <button
+                                class="collect-btn border border-primary text-primary hover:bg-primary/10 py-3 rounded-lg transition-colors font-medium">
+                                <i class="fa fa-star-o mr-2"></i>收藏项目
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目2 -->
+    <div class="project-card bg-white border border-gray-100 rounded-xl overflow-hidden shadow-custom card-hover" data-category="配套服务">
+                    <div class="md:flex">
+                        <div class="p-8 md:w-2/3">
+                            <div class="flex flex-wrap justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-dark">农机维修服务中心</h3>
+                                <span
+                                    class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">配套服务</span>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-money mr-2 text-primary"></i>
+                                    <span>投资：20-80万</span>
+                                </div>
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-map-marker mr-2 text-primary"></i>
+                                    <span>选址：市场内指定区域</span>
+                                </div>
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-clock-o mr-2 text-primary"></i>
+                                    <span>合作期限：5年起</span>
+                                </div>
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-percent mr-2 text-primary"></i>
+                                    <span>回报率：预计20-35%</span>
+                                </div>
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-shield mr-2 text-primary"></i>
+                                    <span>支持：技术+场地+客源</span>
+                                </div>
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-calendar mr-2 text-primary"></i>
+                                    <span>启动时间：季度招商</span>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <h4 class="font-bold text-dark mb-2">项目介绍：</h4>
+                                <ul class="text-neutral space-y-1 ml-6 list-disc">
+                                    <li>在青园农机城内设立专业农机维修服务中心</li>
+                                    <li>为市场内商户及周边农户提供农机维修保养服务</li>
+                                    <li>享受市场流量支持和客户推荐</li>
+                                    <li>可承接集团采购农机的售后服务业务</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">合作要求：</h4>
+                                <ul class="text-neutral space-y-1 ml-6 list-disc">
+                                    <li>具备农机维修资质和专业技术团队</li>
+                                    <li>拥有必要的维修设备和工具</li>
+                                    <li>有良好的服务意识和客户口碑</li>
+                                    <li>能够遵守市场统一服务标准和管理规定</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-8 md:w-1/3 flex flex-col justify-center">
+                            <button
+                                class="inquire-btn bg-primary hover:bg-primary/90 text-white py-3 rounded-lg transition-colors font-medium mb-4">
+                                咨询详情
+                            </button>
+                            <button
+                                class="collect-btn border border-primary text-primary hover:bg-primary/10 py-3 rounded-lg transition-colors font-medium">
+                                <i class="fa fa-star-o mr-2"></i>收藏项目
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目3 -->
+    <div class="project-card bg-white border border-gray-100 rounded-xl overflow-hidden shadow-custom card-hover" data-category="电商平台">
+                    <div class="md:flex">
+                        <div class="p-8 md:w-2/3">
+                            <div class="flex flex-wrap justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-dark">农产品电商平台合作</h3>
+                                <span
+                                    class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">电商平台</span>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-money mr-2 text-primary"></i>
+                                    <span>投资：5-30万</span>
+                                </div>
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-map-marker mr-2 text-primary"></i>
+                                    <span>形式：线上合作</span>
+                                </div>
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-clock-o mr-2 text-primary"></i>
+                                    <span>合作期限：1-3年</span>
+                                </div>
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-percent mr-2 text-primary"></i>
+                                    <span>回报率：预计25-40%</span>
+                                </div>
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-shield mr-2 text-primary"></i>
+                                    <span>支持：平台+物流+培训</span>
+                                </div>
+                                <div class="flex items-center text-neutral">
+                                    <i class="fa fa-calendar mr-2 text-primary"></i>
+                                    <span>启动时间：月度招商</span>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <h4 class="font-bold text-dark mb-2">项目介绍：</h4>
+                                <ul class="text-neutral space-y-1 ml-6 list-disc">
+                                    <li>入驻青园农产品电商平台，开展线上销售业务</li>
+                                    <li>利用集团物流体系实现农产品快速配送</li>
+                                    <li>享受平台流量扶持和营销推广支持</li>
+                                    <li>参与集团组织的线上促销活动和直播带货</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-dark mb-2">合作要求：</h4>
+                                <ul class="text-neutral space-y-1 ml-6 list-disc">
+                                    <li>拥有优质农产品货源或生产基地</li>
+                                    <li>具备一定的电商运营能力或学习意愿</li>
+                                    <li>能够保证产品质量和供应稳定性</li>
+                                    <li>同意遵守平台运营规则和售后服务标准</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 p-8 md:w-1/3 flex flex-col justify-center">
+                            <button
+                                class="inquire-btn bg-primary hover:bg-primary/90 text-white py-3 rounded-lg transition-colors font-medium mb-4">
+                                咨询详情
+                            </button>
+                            <button
+                                class="collect-btn border border-primary text-primary hover:bg-primary/10 py-3 rounded-lg transition-colors font-medium">
+                                <i class="fa fa-star-o mr-2"></i>收藏项目
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 分页 -->
+            <!-- <div class="mt-16 flex justify-center">
+                    <nav class="flex items-center space-x-1">
+                        <a href="#" class="px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a href="#" class="px-3 py-2 rounded-lg bg-primary text-white">1</a>
+                        <a href="#" class="px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">2</a>
+                        <a href="#" class="px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">3</a>
+                        <span class="px-3 py-2 text-gray-400">...</span>
+                        <a href="#" class="px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">5</a>
+                        <a href="#" class="px-3 py-2 rounded-lg border border-gray-300 text-gray-600 hover:bg-primary hover:text-white hover:border-primary transition-colors">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </nav>
+                </div> -->
+        </div>
+    </section>
+
+    <!-- 合作流程 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark">
+                    合作流程
+                </h2>
+                <p class="text-neutral max-w-2xl mx-auto mt-4">
+                    简单高效的合作流程，让您轻松开启与青园的合作之旅
+                </p>
+            </div>
+
+            <div class="relative">
+                <!-- 连接线 -->
+                <div
+                    class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-primary/20 transform -translate-y-1/2 z-0">
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-8 relative z-10">
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                            1
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">咨询洽谈</h3>
+                        <p class="text-neutral">
+                            联系我们，了解项目详情和合作模式
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                            2
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">实地考察</h3>
+                        <p class="text-neutral">
+                            参观市场，评估合作可行性
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                            3
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">方案制定</h3>
+                        <p class="text-neutral">
+                            量身定制合作方案和支持政策
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                            4
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">合同签订</h3>
+                        <p class="text-neutral">
+                            确认合作细节，签订合作协议
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                            5
+                        </div>
+                        <h3 class="text-lg font-bold mb-3">开业运营</h3>
+                        <p class="text-neutral">
+                            提供开业支持，正式启动运营
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 政策支持 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">政策保障</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark">
+                    投资扶持政策
+                </h2>
+                <p class="text-neutral max-w-2xl mx-auto mt-4">
+                    我们提供全方位的政策支持，降低投资风险，保障投资回报
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl shadow-custom card-hover">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                            <i class="fa fa-percent text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">税收优惠</h3>
+                    </div>
+                    <ul class="space-y-3 text-neutral">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>符合条件的企业享受3年所得税减免</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>增值税地方留存部分50%返还，期限3年</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>房产税、城镇土地使用税减免50%</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-custom card-hover">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                            <i class="fa fa-building text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">场地支持</h3>
+                    </div>
+                    <ul class="space-y-3 text-neutral">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>优质商户享受最长6个月免租期</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>年租金超过5万元的，第二年起享受8折优惠</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>统一装修补贴最高可达300元/平方米</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-custom card-hover">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                            <i class="fa fa-money text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">资金扶持</h3>
+                    </div>
+                    <ul class="space-y-3 text-neutral">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>重点项目最高可获得50万元创业扶持资金</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>提供最高200万元的经营贷款担保</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>年销售额达标者享受2%的销售奖励</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-custom card-hover">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                            <i class="fa fa-bullhorn text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">营销支持</h3>
+                    </div>
+                    <ul class="space-y-3 text-neutral">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>免费参与集团组织的各类展销活动</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>共享集团广告资源，每年免费宣传</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>专业团队提供营销策划和推广支持</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-custom card-hover">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                            <i class="fa fa-graduation-cap text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">培训支持</h3>
+                    </div>
+                    <ul class="space-y-3 text-neutral">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>免费参加专业技能和经营管理培训</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>提供行业专家一对一指导服务</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>组织优秀商户外出考察学习</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl shadow-custom card-hover">
+                    <div class="flex items-center mb-6">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                            <i class="fa fa-cogs text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">配套服务</h3>
+                    </div>
+                    <ul class="space-y-3 text-neutral">
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>提供统一的物流配送和仓储服务</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>共享信息化管理系统和大数据分析</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check text-primary mt-1 mr-2"></i>
+                            <span>提供法律咨询、财务代理等专业服务</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成功案例 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">合作典范</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark">
+                    成功合作案例
+                </h2>
+                <p class="text-neutral max-w-2xl mx-auto mt-4">
+                    看看我们的合作伙伴如何在青园平台上实现业务增长
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl overflow-hidden shadow-custom card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://picsum.photos/600/400?random=1" alt="东方红农机安徽总代理"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">东方红农机安徽总代理</h3>
+                        <p class="text-sm text-neutral mb-4">合作年限：5年 | 年销售额：2000万+</p>
+                        <p class="text-neutral mb-4">
+                            自2018年合作以来，借助青园集团的平台优势，东方红农机在安徽市场的占有率从15%提升至35%，年销售额增长超过150%。
+                        </p>
+                        <div class="flex items-center text-primary">
+                            <span class="font-medium">查看详情</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-custom card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://picsum.photos/600/400?random=2" alt="新农人农机维修中心"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">新农人农机维修中心</h3>
+                        <p class="text-sm text-neutral mb-4">合作年限：3年 | 服务客户：800+</p>
+                        <p class="text-neutral mb-4">
+                            入驻青园农机城后，依托市场客流优势，维修业务量年均增长40%，已成为区域内最具影响力的农机维修服务提供商。
+                        </p>
+                        <div class="flex items-center text-primary">
+                            <span class="font-medium">查看详情</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl overflow-hidden shadow-custom card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://picsum.photos/600/400?random=3" alt="皖农优选电商平台"
+                            class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">皖农优选电商平台</h3>
+                        <p class="text-sm text-neutral mb-4">合作年限：2年 | 年交易额：1500万+</p>
+                        <p class="text-neutral mb-4">
+                            通过与青园集团电商平台合作，整合优质农产品资源，实现线上年交易额突破1500万元，带动500余农户增收。
+                        </p>
+                        <div class="flex items-center text-primary">
+                            <span class="font-medium">查看详情</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- 模块标题 -->
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">联系我们</span>
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-display font-bold text-dark">
+                    共商合作，共创未来
+                </h2>
+                <p class="text-neutral max-w-2xl mx-auto mt-4">
+                    如有任何投资合作相关问题，欢迎通过以下方式联系我们
+                </p>
+            </div>
+
+            <!-- 联系信息主体区域 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
+                <!-- 联系卡片 -->
+                <div
+                    class="lg:col-span-2 bg-light rounded-xl p-8 shadow-custom hover:shadow-hover transition-all duration-300">
+                    <h3 class="text-2xl font-bold mb-6 text-dark">联系方式</h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                <i class="fa fa-map-marker text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">公司地址</h4>
+                                <p class="text-neutral">安徽省安庆市宜秀区青园农机机电城</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                <i class="fa fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">联系电话</h4>
+                                <p class="text-neutral">0550-5318888</p>
+                                <p class="text-neutral">13800138000</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                <i class="fa fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">电子邮箱</h4>
+                                <p class="text-neutral">info@qingyuangroup.com</p>
+                                <p class="text-neutral">service@qingyuangroup.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+                                <i class="fa fa-clock-o text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">营业时间</h4>
+                                <p class="text-neutral">周一至周五: 8:00 - 18:00</p>
+                                <p class="text-neutral">周六至周日: 9:00 - 16:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 社交媒体 -->
+                    <div class="mt-8 flex space-x-4">
+                        <div class="relative" id="wechat-container">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors cursor-pointer"
+                                id="wechat-icon">
+                                <i class="fa fa-weixin"></i>
+                            </a>
+                            <div
+                                class="qrcode-tooltip absolute bottom-full left-0 transform -translate-x-[10px] mb-4 bg-white p-4 rounded-xl shadow-lg z-20">
+                                <div class="text-center">
+                                    <img src="../img/qrcode/qh-school.jpg" alt="安徽青园集团微信公众号二维码"
+                                        class="w-full h-auto rounded-lg shadow-sm">
+                                    <p class="text-xs text-gray-600 mt-2 font-medium">扫码关注微信公众号</p>
+                                </div>
+                                <div
+                                    class="absolute bottom-[-8px] left-[20px] transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-white">
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors">
+                            <i class="fa fa-qq"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors">
+                            <svg t="1753082413186" class="icon" viewbox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="5374" width="200" height="200">
+                                <path
+                                    d="M899.8 594.1c-15.4 31.9-31.8 40.6-65.7 35.3-21.8-3.4-33.7-16.2-37-41.7 13.2 0 26.2-0.3 39.1 0.1 8.7 0.3 12.7-2.6 12.3-11.8-0.5-13.2 0.1-26.6-0.3-39.8-0.4-11.1-6.4-18.3-17.7-18.5-22.7-0.5-45.4-0.2-70.3-0.2V630h-50.6V518.3h-51v-52h49.6v-44.1h-32.9v-50.8c10.8-0.5 21.2-1.1 33.5-1.6v-17.6h51c-2 14.2 3.6 18.8 18.3 19 39.2 0.6 59.8 22.7 60.5 62 0.2 10.8 0.1 21.6 0.1 33.5 31.6-1.5 51.1 11.6 61.3 38.4v89h-0.2zM759.9 419.8c0 15.5-0.6 27.1 0.4 38.5 0.3 2.9 5.7 7.6 8.8 7.6 6.2 0.1 17.5-2 17.7-4.2 1.3-11.8 1.8-24.5-1.7-35.6-1.2-3.8-14.5-3.9-25.2-6.3z m-494-67.7c-0.1 77.4-0.1 154.8-0.5 232.1-0.2 33.1-20.9 50.8-52.2 45.6-20.5-3.4-31.5-17.2-32.3-41.6h34v-236c17.1-0.1 34.1-0.1 51-0.1z m216.6 0C470 377 456.1 401.3 447.2 425c20.8-1.2 39.4-2.3 61.7-3.6-11.8 23.7-22.2 44.8-32.7 65.8-1.4 2.8-2.8 5.8-4.2 8.6-11 22-10.9 22 13.4 22.7 2.5 0.1 5 0.4 9.7 0.8-6.8 13.4-12.8 25.6-19.3 37.6-1.1 2-4 4.2-6 4.2-18-0.1-36.1 0.6-54-1.4-12.9-1.5-17.9-11.2-12.8-23.6 6.2-15.2 13.4-29.9 20.2-44.9 2.3-5.1 4.6-10.3 8.1-17.9-10 0-17.2 0.2-24.5-0.1-21.5-0.7-28.6-10.3-19.8-29.8 14-30.9 29.6-61 44.4-91.5l51.1 0.2zM109.9 546.3c3.2-17.9 7.3-35.7 9.4-53.6 2.7-22.6 3.8-45.4 5.7-69.1h53.6c-9.1 61.3 1.8 126.2-38.4 182.6-10.7-18.9-20.6-36.2-30.4-53.6 0.1-2 0.1-4.1 0.1-6.3zM899.8 403c-11.5 19.9-29.6 20.5-49 17.4-5.8-25.3-1.6-41.9 11.9-48.1 12.6-5.8 24.1-1.2 37.2 14.8l-0.1 15.9z"
+                                    p-id="5375" fill="#ffffff"></path>
+                                <path
+                                    d="M604.9 579.7c14 0 27.1 0.3 40.2-0.1 8.2-0.2 10.8 3.2 11.3 11.2 2.5 40.2 2.8 40.2-37.9 40.2H474.7c8.9-17.6 16.2-33.1 24.7-47.8 1.6-2.8 8.5-3.3 12.9-3.4 12.7-0.5 25.4-0.2 39.3-0.2V422.1h-32.5v-50H637v49.2h-32.2c0.1 53.2 0.1 104.7 0.1 158.4zM302.1 423.1h50.2c2.4 31 1.4 62.3 8.1 91.8 7.9 34.5-4.7 61.3-21 88.5-24.4-21.4-37.7-85.3-37.3-180.3zM392.6 579H474c-9.1 17.8-16.3 32.3-24.1 46.5-1.5 2.6-5.8 5.1-8.8 5.1-23.7 0.4-47.5 0.2-74.7 0.2 10.3-20.4 18.8-37.1 26.2-51.8z"
+                                    p-id="5376" fill="#ffffff"></path>
+                            </svg>
+                        </a>
+
+                        <a target="_blank"
+                            href="https://www.douyin.com/user/MS4wLjABAAAAQ1njIFuE-nyc9zxHpEpEKvx2qN67GaFjW6ZcY1Xo2E8?from_tab_name=main"
+                            class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-primary/90 transition-colors">
+
+                            <svg t="1753083581352" class="icon" viewbox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="10540" width="200" height="200">
+                                <path
+                                    d="M523.377778 312.888889v273.066667c0 31.288889-25.6 56.888889-56.888889 56.888888s-56.888889-25.6-56.888889-56.888888 25.6-56.888889 56.888889-56.888889c5.688889 0 11.377778 0 17.066667 2.844444v-68.266667h-17.066667c-68.266667 0-125.155556 56.888889-125.155556 125.155556 0 68.266667 56.888889 125.155556 125.155556 125.155556 68.266667 0 125.155556-56.888889 125.155555-125.155556v-139.377778c28.444444 19.911111 59.733333 31.288889 93.866667 31.288889v-68.266667c-51.2 0-93.866667-42.666667-93.866667-93.866666h-68.266666z"
+                                    fill="#ffffff" p-id="10541"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 微信二维码 -->
+                <div
+                    class="bg-light rounded-xl p-8 shadow-custom text-center hover:shadow-hover flex flex-col justify-center">
+                    <h4 class="font-bold text-gray-800 mb-6 text-xl">扫码关注微信公众号</h4>
+                    <div class="bg-white p-4 inline-block rounded-lg mx-auto mb-6">
+                        <img src="../img/qrcode/qh-school.jpg" alt="微信公众号二维码" class="w-56 h-56 object-cover">
+                    </div>
+                    <p class="text-neutral text-sm flex-grow flex items-center justify-center">
+                        获取最新农机资讯和优惠信息
+                    </p>
+                </div>
+            </div>
+
+            <!-- 独立地图模块（从图片中移出） -->
+            <!-- 独立地图模块（含真实位置） -->
+            <div class="bg-light rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl">
+                <!-- 地图标题栏 -->
+                <div class="px-6 py-4 border-b border-gray-100 flex justify-between items-center">
+                    <h3 class="text-xl font-bold text-dark">公司位置</h3>
+                    <a href="https://j.map.baidu.com/xxxxxx" target="_blank"
+                        class="text-primary hover:text-primary/80 text-sm font-medium flex items-center">
+                        查看全屏地图 <i class="fa fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+
+                <!-- 地图容器（嵌入百度地图API） -->
+                <div class="flex flex-col md:flex-row">
+                    <!-- 左侧地图显示区域 -->
+                    <div class="w-full md:w-3/4 h-[300px] md:h-[400px] relative">
+                        <!-- 百度地图容器 -->
+                        <div id="baidu-map" class="w-full h-full"></div>
+                    </div>
+
+                    <!-- 右侧位置信息 -->
+                    <div class="w-full md:w-1/4 p-6 bg-white border-t md:border-t-0 md:border-l border-gray-100">
+                        <h4 class="font-bold text-primary text-lg mb-4">安徽青园集团(中国农机城)</h4>
+                        <div class="space-y-4 text-neutral">
+                            <p class="flex items-start">
+                                <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                                <span>安徽省安庆市宜秀区青园国际农机机电城</span>
+                            </p>
+                            <p class="flex items-start">
+                                <i class="fa fa-car text-primary mt-1 mr-3"></i>
+                                <span>距安庆站约3公里，驾车10分钟可达</span>
+                            </p>
+                            <!-- <p class="flex items-start">
+                    <i class="fa fa-bus text-primary mt-1 mr-3"></i>
+                    <span>公交：全椒101路至青园国际农机机电城站下车即到</span>
+                </p> -->
+                        </div>
+
+                        <a href="https://j.map.baidu.com/64/cBp" target="_blank"
+                            class="mt-6 inline-block bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+                            导航前往 <i class="fa fa-location-arrow ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
+                            <img src="../img/icon/ahqy.jpg" alt="安徽青园集团"
+                                class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <span class="text-xl font-display font-bold text-white">安徽青园集团</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        青园集团愿与全国相关企业联盟发展，竭诚合作，用八方资源，打造"机械强农"商业典范。
+                    </p>
+                    <div class="flex space-x-4">
+                        <!-- 页脚微信图标添加二维码功能 -->
+                        <div class="relative" id="footer-wechat-container">
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                                id="footer-wechat-icon">
+                                <i class="fa fa-weixin"></i>
+                            </a>
+                            <!-- 页脚微信二维码 -->
+                            <div
+                                class="qrcode-tooltip absolute bottom-full left-0 transform -translate-x-[10px] mb-4 bg-white p-4 rounded-xl shadow-lg z-20">
+                                <div class="text-center">
+                                    <img src="../img/qrcode/qh-school.jpg" alt="安徽青园集团微信公众号二维码"
+                                        class="w-full h-auto rounded-lg shadow-sm">
+                                    <p class="text-xs text-gray-600 mt-2 font-medium">扫码关注微信公众号</p>
+                                </div>
+                                <!-- 调整箭头位置，使其指向微信图标 -->
+                                <div
+                                    class="absolute bottom-[-8px] left-[20px] transform -translate-x-1/2 w-0 h-0 border-l-8 border-l-transparent border-r-8 border-r-transparent border-t-8 border-t-white">
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            id="footer-wechat-icon">
+                            <i class="fa fa-qq text-lg"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            id="footer-wechat-icon">
+                            <i class="fa fa-weibo text-lg"></i>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            id="footer-wechat-icon"
+                            href="https://www.douyin.com/user/MS4wLjABAAAAQ1njIFuE-nyc9zxHpEpEKvx2qN67GaFjW6ZcY1Xo2E8?from_tab_name=main"
+                            target="_blank"
+                            class="text-gray-400 hover:text-white transition-colors w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                            <svg t="1753083581352" class="icon" viewbox="0 0 1024 1024" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" p-id="10540" width="200" height="200">
+                                <path
+                                    d="M523.377778 312.888889v273.066667c0 31.288889-25.6 56.888889-56.888889 56.888888s-56.888889-25.6-56.888889-56.888888 25.6-56.888889 56.888889-56.888889c5.688889 0 11.377778 0 17.066667 2.844444v-68.266667h-17.066667c-68.266667 0-125.155556 56.888889-125.155556 125.155556 0 68.266667 56.888889 125.155556 125.155556 125.155556 68.266667 0 125.155556-56.888889 125.155555-125.155556v-139.377778c28.444444 19.911111 59.733333 31.288889 93.866667 31.288889v-68.266667c-51.2 0-93.866667-42.666667-93.866667-93.866666h-68.266666z"
+                                    fill="#ffffff" p-id="10541"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">联系方式</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">安徽省安庆市青园农机城</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">0556-123456</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">info@ahqy.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-clock-o text-primary mt-1 mr-3"></i>
+                            <span class="text-gray-400">周一至周日 8:00-18:00</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <!-- 右移标题右移并处于两列之间 -->
+                    <h4 class="text-lg font-bold mb-6 pl-6 md:pl-0 md:absolute md:left-[50%] md:-translate-x-[3.5rem]">
+                        快速链接</h4>
+
+                    <!-- 双列布局的链接列表 -->
+                    <ul class="quick-links-container text-gray-400 pt-8">
+                        <li class="quick-links-item">
+                            <a href="index.html" class="text-gray-400 hover:text-white transition-colors">首页</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="market.html" class="text-gray-400 hover:text-white transition-colors">农机大市场</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="merchants.html" class="text-gray-400 hover:text-white transition-colors">商铺展示</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="products.html" class="text-gray-400 hover:text-white transition-colors">产品中心</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="hot.html" class="text-gray-400 hover:text-white transition-colors">热门产品</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="testimonials.html"
+                                class="text-gray-400 hover:text-white transition-colors">客户评价</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="services.html" class="text-gray-400 hover:text-white transition-colors">服务优势</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="culture.html" class="text-gray-400 hover:text-white transition-colors">文化理念</a>
+                        </li>
+
+                        <li class="quick-links-item">
+                            <a href="news.html" class="text-gray-400 hover:text-white transition-colors">新闻动态</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="media.html" class="text-gray-400 hover:text-white transition-colors">媒体看青园</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="jobs.html" class="text-gray-400 hover:text-white transition-colors">人才招聘</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="investment.html" class="text-gray-400 hover:text-white transition-colors">招商中心</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="dowmload.html" class="text-gray-400 hover:text-white transition-colors">下载中心</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="detail.html" class="text-gray-400 hover:text-white transition-colors">关于我们</a>
+                        </li>
+                        <li class="quick-links-item">
+                            <a href="index.html#contact.html"
+                                class="text-gray-400 hover:text-white transition-colors">联系我们</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <style>
+                    /* 保持原有双列布局样式 */
+                    .quick-links-container {
+                        column-count: 2;
+                        column-gap: 4rem;
+                        /* 加大列间距，为标题留出空间 */
+                    }
+
+                    .quick-links-item {
+                        break-inside: avoid;
+                        margin-bottom: 0.8rem;
+                    }
+
+                    /* 响应式调整 */
+                    @media(max-width: 768px) {
+                        .quick-links-container {
+                            column-count: 1;
+                            column-gap: 0;
+                        }
+
+                        h4.md\:absolute {
+                            position: static;
+                            transform: none;
+                            left: 0;
+                            pl: 0;
+                        }
+                    }
+                </style>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6">微信公众号</h4>
+                    <div class="bg-white p-3 inline-block rounded-lg">
+                        <img src="../img/qrcode/qh-school.jpg" alt="微信公众号二维码" class="w-36 h-36">
+                    </div>
+                    <p class="text-xs text-gray-400 mt-2 font-medium">扫码关注获取更多资讯</p>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2025 安徽青园集团. 保留所有权利.
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">隐私政策</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">使用条款</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">网站地图</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top"
+        class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-primary/90">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+     
+
+        // 收藏项目功能
+        const collectButtons = document.querySelectorAll('.collect-btn');
+
+        collectButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const icon = button.querySelector('i');
+                if (icon.classList.contains('fa-star-o')) {
+                    icon.classList.remove('fa-star-o');
+                    icon.classList.add('fa-star');
+                    button.classList.add('bg-primary/10');
+                    alert('已收藏该项目');
+                } else {
+                    icon.classList.remove('fa-star');
+                    icon.classList.add('fa-star-o');
+                    button.classList.remove('bg-primary/10');
+                    alert('已取消收藏');
+                }
+            });
+        });
+
+        // 咨询详情功能
+        const inquireButtons = document.querySelectorAll('.inquire-btn');
+
+        inquireButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const projectTitle = button.closest('.card-hover').querySelector('h3').textContent;
+                window.location.href = `#contact?project=${encodeURIComponent(projectTitle)
+                    }`;
+            });
+        });
+
+        // 页面加载时处理URL参数
+        window.addEventListener('load', () => {
+            const params = new URLSearchParams(window.location.search);
+            const project = params.get('project');
+            if (project) {
+                const projectSelect = document.getElementById('project');
+                if (projectSelect) { // 尝试匹配项目
+                    for (let i = 0; i < projectSelect.options.length; i++) {
+                        if (projectSelect.options[i].text.includes(project)) {
+                            projectSelect.selectedIndex = i;
+                            break;
+                        }
+                    }
+
+                    // 滚动到联系表单
+                    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    </script>
+
+<script>
+    // 项目筛选功能
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // 移除所有按钮的选中样式
+            filterButtons.forEach(btn => {
+                btn.classList.remove('bg-primary', 'text-white');
+                btn.classList.add('bg-gray-100', 'text-neutral', 'hover:bg-primary/10', 'hover:text-primary');
+            });
+            
+            // 添加当前按钮的选中样式
+            button.classList.add('bg-primary', 'text-white');
+            button.classList.remove('bg-gray-100', 'text-neutral', 'hover:bg-primary/10', 'hover:text-primary');
+            
+            // 获取当前选中的类别
+            const category = button.getAttribute('data-category');
+            
+            // 筛选项目卡片
+            projectCards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    // 显示匹配的项目
+                    card.style.display = 'block';
+                    // 添加淡入动画效果
+                    card.style.opacity = '0';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transition = 'opacity 0.3s ease';
+                    }, 50);
+                } else {
+                    // 隐藏不匹配的项目
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+<!-- 导航栏滚动效果、移动端菜单切换、平滑滚动 -->
+ <script src="../common/js/header-show.js"></script>
+ 
+    <!-- 返回顶部按钮 -->
+<script src="../common/js/backtop.js"></script>
+
+     <!-- 二维码显示关闭脚本 -->
+<script src="../common/js/qrcode-show-footer.js"></script>
+
+    <!-- 百度地图API脚本 -->
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=nSxiPohfziUaCuONe4ViUP2N">
+    </script>
+   <!-- 导航脚本 -->
+   <script src="../common/js/maps-directore.js"></script>
+
+</body>
+
+</html>
